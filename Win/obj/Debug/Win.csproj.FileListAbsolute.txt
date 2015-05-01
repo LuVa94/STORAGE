@@ -1,0 +1,46 @@
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\bin\Debug\Win.exe.config
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\bin\Debug\Win.exe
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\bin\Debug\Win.pdb
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Form1.resources
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Form2.resources
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Properties.Resources.resources
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.exe
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.pdb
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\bin\Debug\Asd.mdf
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\bin\Debug\Asd_log.ldf
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Form3.resources
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Form4.resources
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Form5.resources
+c:\users\user\documents\visual studio 2013\Projects\Win\Win\obj\Debug\Win.Form6.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win\Win\obj\Debug\Win.Form7.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win\Win\obj\Debug\Win.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\bin\Debug\Win.exe.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.exe
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\bin\Debug\Asd.mdf
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\bin\Debug\Asd_log.ldf
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\bin\Debug\Win.exe
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\bin\Debug\Win.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.Form1.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.Form3.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.Form5.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.Form6.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.Form7.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\Win - копия1\Win\obj\Debug\Win.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\bin\Debug\Win.exe.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.exe
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\bin\Debug\Asd.mdf
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\bin\Debug\Asd_log.ldf
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\bin\Debug\Win.exe
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\bin\Debug\Win.pdb
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form6.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form7.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Menu.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form1.resources
