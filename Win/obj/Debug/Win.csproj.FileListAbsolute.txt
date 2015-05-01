@@ -44,3 +44,6 @@ C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Pr
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Menu.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form1.resources
+C:\Users\XRom\Desktop\testTK12\Win\bin\Debug\Win.exe.config
+C:\Users\XRom\Desktop\testTK12\Win\obj\Debug\Win.exe
+C:\Users\XRom\Desktop\testTK12\Win\obj\Debug\Win.pdb
