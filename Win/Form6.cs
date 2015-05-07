@@ -17,7 +17,7 @@ namespace Win
             InitializeComponent();
         }
 
-        DB_z db7 = new DB_z(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
        
         private void button2_Click(object sender, EventArgs e)
         {
@@ -26,6 +26,8 @@ namespace Win
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool w1 = true;
+            int n = 0;
             try
             {
                 if (textBox1.Text == "")
@@ -38,15 +40,26 @@ namespace Win
             var q = db7.Vivod(0);
             foreach (Заказ z in q)
             {
-                var w = z.заказID.Equals(Convert.ToInt32(textBox1.Text));
-                if (w==true)
+                w1 = Convert.ToInt32(textBox1.Text).Equals(z.заказID);
+                n = z.заказID;
+            }
+                try
+                {
+                    if (w1 != true)
+                    {
+                        MessageBox.Show("Заказа с данным номером не существует");
+                        return;
+                    }
+
+                }
+                catch { }
+            
+            foreach (Заказ z in q)
+            {
+                if (z.заказID == n)
                 {
                     MessageBox.Show(z.Статус);
-                }
-                else
-                {
-                    MessageBox.Show("Заказа с данным номером не существует");
-                }  
+                } 
             }
                 
             

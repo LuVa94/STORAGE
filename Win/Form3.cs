@@ -26,7 +26,7 @@ namespace Win
         DB_post db4 = new DB_post(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
         DB_sost db5 = new DB_sost(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
         DB_zak db6 = new DB_zak(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_z db7 = new DB_z(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
         DB_szak db8 = new DB_szak(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
     
         public void Out()
@@ -79,8 +79,8 @@ namespace Win
             if (radioButton6.Checked == true)
             {
                 label11.Text = ("закупкаID" + " | " + "поставщикID" + " | " + "комплектующиеID" + " | " + "Количество");
-                var z = db6.Vivod(0);
-                foreach (Закупка zak in z)
+                var zz = db6.Vivod(0);
+                foreach (Закупка zak in zz)
                 {
                     listBox1.Items.Add(zak);
                 }
@@ -89,9 +89,9 @@ namespace Win
             {
                 label11.Text = ("заказID" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Материал" + " | " + "Стоимость" + " | " + "Дата_выполнения" + " | " + "Статус" + " | " + "мебельID" + " | " + "клиентID");
                 var q = db7.Vivod(0);
-                foreach (Заказ z in q)
+                foreach (Заказ za in q)
                 {
-                    listBox1.Items.Add(z);
+                    listBox1.Items.Add(za);
                 }
             }
             if (radioButton8.Checked == true)
@@ -822,19 +822,19 @@ namespace Win
         private void проверкаСтатусаЗаказаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form6 f6 = new Form6();
-            f6.Show();
+            f6.ShowDialog();
         }
 
         private void оплатитьЗаказToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form7 f7 = new Form7();
-            f7.Show();
+            f7.ShowDialog();
         }
 
         private void эскизИСтоимостьПолученнойМебелиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            f1.Show();
+            f1.ShowDialog();
         }
     }
 }

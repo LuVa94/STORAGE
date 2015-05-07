@@ -23,11 +23,13 @@ namespace Win
             get;
             set;
         }
+         [Column]
         public int мебельID
         {
             get;
             set;
         }
+         [Column]
         public int Количество
         {
             get;

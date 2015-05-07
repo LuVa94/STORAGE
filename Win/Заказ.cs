@@ -36,31 +36,37 @@ namespace Win
             get;
             set;
         }
+        [Column]
         public string Материал
         {
             get;
             set;
         }
+        [Column]
         public int Стоимость
         {
             get;
             set;
         }
+        [Column]
         public DateTimeOffset Дата_выполнения
         {
             get;
             set;
         }
+        [Column]
         public string Статус
         {
             get;
             set;
         }
+        [Column]
         public int мебельID
         {
             get;
             set;
         }
+        [Column]
         public int клиентID
         {
             get;
@@ -105,9 +111,9 @@ namespace Win
         }
        
     }
-    public class DB_z : DataContext
+    public class DB_zakaz : DataContext
     {
-        public DB_z(string cs)
+        public DB_zakaz(string cs)
             : base(cs)
         {
         }
@@ -124,44 +130,45 @@ namespace Win
         }
         public void ADD(int Длина, int Ширина, int Глубина, string Материал, int Стоимость, DateTimeOffset Дата_выполнения, string Статус, int мебельID, int клиентID)
         {
-            Заказ z = new Заказ();
-            z.Длина = Длина;
-            z.Ширина = Ширина;
-            z.Глубина = Глубина;
-            z.Материал= Материал;
-            z.Стоимость = Стоимость;
-            z.Дата_выполнения = Дата_выполнения;
-            z.Статус = Статус;
-            z.мебельID = мебельID;
-            z.клиентID = клиентID;
-            this.Заказ.InsertOnSubmit(z);
+            Заказ za = new Заказ();
+            za.Длина = Длина;
+            za.Ширина = Ширина;
+            za.Глубина = Глубина;
+            za.Материал= Материал;
+            za.Стоимость = Стоимость;
+            za.Дата_выполнения = Дата_выполнения;
+            za.Статус = Статус;
+            za.мебельID = мебельID;
+            za.клиентID = клиентID;
+            this.Заказ.InsertOnSubmit(za);
             this.SubmitChanges();
         }
 
         public void Edit(int заказID, int Длина, int Ширина, int Глубина, string Материал, int Стоимость, DateTimeOffset Дата_выполнения, string Статус, int мебельID, int клиентID)
         {
-            Заказ z = this.Заказ.Where(c => c.заказID == заказID).FirstOrDefault();
-            z.Длина = Длина;
-            z.Ширина = Ширина;
-            z.Глубина = Глубина;
-            z.Материал = Материал;
-            z.Стоимость = Стоимость;
-            z.Дата_выполнения = Дата_выполнения;
-            z.Статус = Статус;
-            z.мебельID = мебельID;
-            z.клиентID = клиентID;
+            Заказ za = this.Заказ.Where(c => c.заказID == заказID).FirstOrDefault();
+            za.Длина = Длина;
+            za.Ширина = Ширина;
+            za.Глубина = Глубина;
+            za.Материал = Материал;
+            za.Стоимость = Стоимость;
+            za.Дата_выполнения = Дата_выполнения;
+            za.Статус = Статус;
+            za.мебельID = мебельID;
+            za.клиентID = клиентID;
             this.SubmitChanges();
         }
 
         public void Delete(int заказID)
         {
-            Заказ z = this.Заказ.Where(c => c.заказID == заказID).FirstOrDefault();
-            this.Заказ.DeleteOnSubmit(z);
+            Заказ za = this.Заказ.Where(c => c.заказID == заказID).FirstOrDefault();
+            this.Заказ.DeleteOnSubmit(za);
             this.SubmitChanges();
         }
         public List<Заказ> Vivod(int заказID)
         {
-            return this.Заказ.Select(c => c).ToList();
+            Заказ za = this.Заказ.Where(c => c.заказID > заказID).FirstOrDefault();
+            return this.Заказ.Where(c => c.заказID>заказID).ToList<Заказ>();
         }
     }
 }
