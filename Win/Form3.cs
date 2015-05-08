@@ -836,5 +836,11 @@ namespace Win
             Form1 f1 = new Form1();
             f1.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Height=0;
+            pictureBox1.Width = 0;
+        }
     }
 }
