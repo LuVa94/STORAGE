@@ -17,7 +17,7 @@ namespace Win
             InitializeComponent();
         }
 
-        DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+       // Program.db_zakaz Program.db7 = new Program.db_zakaz(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
        
         private void button2_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace Win
                     MessageBox.Show("Строка не заполнена! Введите, пожалуйста, номер заказа");
             }
             catch { }
-            var q = db7.Vivod(0);
+            var q = Program.db7.Vivod(0);
            
             foreach (Заказ z in q)
             {
@@ -61,7 +61,7 @@ namespace Win
                     string s7= "oplacheno";
                     int s9 = z.клиентID;
                     int s8 = z.мебельID;
-                    db7.Edit(num, s1,s2,s3,s4,s5,s6,s7,s8,s9);
+                    Program.db7.Edit(num, s1,s2,s3,s4,s5,s6,s7,s8,s9);
                     MessageBox.Show("Заказ оплачен");
                 }
             }

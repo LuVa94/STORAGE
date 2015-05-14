@@ -17,7 +17,7 @@ namespace Win
             InitializeComponent();
         }
 
-        DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+       // Program.db_zakaz Program.db7 = new Program.db_zakaz(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
        
         private void button2_Click(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace Win
                 }
             }
             catch { }
-            var q = db7.Vivod(0);
+            var q = Program.db7.Vivod(0);
             foreach (Заказ z in q)
             {
                 w1 = Convert.ToInt32(textBox1.Text).Equals(z.заказID);

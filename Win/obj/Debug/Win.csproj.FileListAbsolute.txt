@@ -44,3 +44,10 @@ C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Pr
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Menu.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form1.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.СозЗак.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.СозЗаяв.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.ШК.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\bin\Debug\itextsharp.dll
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Ш.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.К.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form2.resources

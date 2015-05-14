@@ -20,21 +20,22 @@ namespace Win
             InitializeComponent();
         }
 
-        DB_meb db1 = new DB_meb(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_kl db2 = new DB_kl(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_com db3 = new DB_com(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_post db4 = new DB_post(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_sost db5 = new DB_sost(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_zak db6 = new DB_zak(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        DB_szak db8 = new DB_szak(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-    
+        //Program.db_meb Program.db1 = new Program.db_meb(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_kl Program.db2 = new Program.db_kl(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_com Program.db3 = new Program.db_com(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_post Program.db4 = new Program.db_post(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_sost Program.db5 = new Program.db_sost(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_zak Program.db6 = new Program.db_zak(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_zakaz Program.db7 = new Program.db_zakaz(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        //Program.db_szak Program.db8 = new Program.db_szak(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+     
+        
         public void Out()
         {
             if (radioButton1.Checked == true)
             {
                 label11.Text=("мебельID" + " | " + "Название" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина");
-                var m = db1.Vivod(0);
+                var m = Program.db1.Vivod(0);
                 foreach (Мебель meb in m)
                 {
                     listBox1.Items.Add(meb);
@@ -43,7 +44,7 @@ namespace Win
             if (radioButton4.Checked == true)
             {
                 label11.Text = ("комплектующиеID" + " | " + "Название" + " | " + "Количество" + " | " + "Дата_поступления" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Стоимость");
-                var k = db3.Vivod(0);
+                var k = Program.db3.Vivod(0);
                 foreach (Комплектующие kom in k)
                 {
                     listBox1.Items.Add(kom);
@@ -52,7 +53,7 @@ namespace Win
             if (radioButton2.Checked == true)
             {
                 label11.Text = ("клиентID" + " | " + "ФИО" + " | " + "Контактный_телефон" + " | " + "Электронная_почта");
-                var c = db2.Vivod(0);
+                var c = Program.db2.Vivod(0);
                 foreach (Клиент kl in c)
                 {
                     listBox1.Items.Add(kl);
@@ -61,7 +62,7 @@ namespace Win
             if (radioButton3.Checked == true)
             {
                 label11.Text = ("поставщикID" + " | " + "Название_организации" + " | " + "комплетующиеID");
-                var p = db4.Vivod(0);
+                var p = Program.db4.Vivod(0);
                 foreach (Поставщик post in p)
                 {
                     listBox1.Items.Add(post);
@@ -70,7 +71,7 @@ namespace Win
             if (radioButton7.Checked == true)
             {
                 label11.Text = ("составляющиеID" + " | " + "мебельID" + " | " + "комплектующиеID" + " | " + "Количество");
-                var sos = db5.Vivod(0);
+                var sos = Program.db5.Vivod(0);
                 foreach (Составляющие sost in sos)
                 {
                     listBox1.Items.Add(sost);
@@ -79,7 +80,7 @@ namespace Win
             if (radioButton6.Checked == true)
             {
                 label11.Text = ("закупкаID" + " | " + "поставщикID" + " | " + "комплектующиеID" + " | " + "Количество");
-                var zz = db6.Vivod(0);
+                var zz = Program.db6.Vivod(0);
                 foreach (Закупка zak in zz)
                 {
                     listBox1.Items.Add(zak);
@@ -88,7 +89,7 @@ namespace Win
             if (radioButton5.Checked == true)
             {
                 label11.Text = ("заказID" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Материал" + " | " + "Стоимость" + " | " + "Дата_выполнения" + " | " + "Статус" + " | " + "мебельID" + " | " + "клиентID");
-                var q = db7.Vivod(0);
+                var q = Program.db7.Vivod(0);
                 foreach (Заказ za in q)
                 {
                     listBox1.Items.Add(za);
@@ -97,7 +98,7 @@ namespace Win
             if (radioButton8.Checked == true)
             {
                 label11.Text = ("ID" + " | " + "заказID" + " | " + "мебельID" + " | " + "Количество");
-                var sz = db8.Vivod(0);
+                var sz = Program.db8.Vivod(0);
                 foreach (Список_заказов szak in sz)
                 {
                     listBox1.Items.Add(szak);
@@ -235,7 +236,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db1.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
+                Program.db1.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -257,7 +258,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db2.ADD(textBox1.Text, textBox2.Text, textBox3.Text);
+                Program.db2.ADD(textBox1.Text, textBox2.Text, textBox3.Text);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -278,7 +279,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db3.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToDateTime(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox7.Text));
+                Program.db3.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToDateTime(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox7.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -303,7 +304,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db4.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text));
+                Program.db4.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 MessageBox.Show("Новая запись добавлена");
@@ -323,7 +324,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db5.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db5.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -344,7 +345,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db8.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db8.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -365,7 +366,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db6.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db6.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -391,7 +392,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                db7.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
+                Program.db7.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -438,7 +439,7 @@ namespace Win
                 str3 = Convert.ToInt32(textBox3.Text);
                 str4 = Convert.ToInt32(textBox4.Text);
                 r = Convert.ToInt32(textBox9.Text);
-                db1.Edit(r, str1, str2, str3, str4);
+                Program.db1.Edit(r, str1, str2, str3, str4);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -470,7 +471,7 @@ namespace Win
                 str2 = textBox2.Text;
                 str3 = textBox3.Text;
                 r = Convert.ToInt32(textBox9.Text);
-                db2.Edit(r, str1, str2, str3);
+                Program.db2.Edit(r, str1, str2, str3);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -501,7 +502,7 @@ namespace Win
                 str2 = textBox2.Text;
                 str3 = textBox3.Text;
                 r = Convert.ToInt32(textBox9.Text);
-                db3.Edit(r, textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToDateTime(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox7.Text));
+                Program.db3.Edit(r, textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToDateTime(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox7.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -535,7 +536,7 @@ namespace Win
                 str1 = textBox1.Text;
                 str2 = Convert.ToInt32(textBox2.Text);
                 r = Convert.ToInt32(textBox9.Text);
-                db4.Edit(r, str1, str2);
+                Program.db4.Edit(r, str1, str2);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 MessageBox.Show("Редактирование записи с ID " + textBox9.Text + " завершено");
@@ -561,7 +562,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db5.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db5.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -588,7 +589,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db8.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db8.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -615,7 +616,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db6.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db6.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -647,7 +648,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int  r;
                 r = Convert.ToInt32(textBox9.Text);
-                db7.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
+                Program.db7.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -679,7 +680,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db1.Delete(r);
+                Program.db1.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -698,7 +699,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db2.Delete(r);
+                Program.db2.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -717,7 +718,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db3.Delete(r);
+                Program.db3.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -736,7 +737,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db4.Delete(r);
+                Program.db4.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -755,7 +756,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db5.Delete(r);
+                Program.db5.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -774,7 +775,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db8.Delete(r);
+                Program.db8.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -793,7 +794,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db6.Delete(r);
+                Program.db6.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -812,7 +813,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                db7.Delete(r);
+                Program.db7.Delete(r);
                 MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -841,6 +842,24 @@ namespace Win
         {
             pictureBox1.Height=0;
             pictureBox1.Width = 0;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Height = 272;
+            pictureBox1.Width = 465;
+        }
+
+        private void создатьЗаказToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            СозЗак сз = new СозЗак();
+            сз.ShowDialog();
+        }
+
+        private void заявкаНаЗакупкуКомплектующихToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            СозЗаяв qwe = new СозЗаяв();
+            qwe.ShowDialog();
         }
     }
 }

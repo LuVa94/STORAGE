@@ -47,6 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\курсач_ооп_2курс\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -71,6 +74,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,14 +102,47 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Заказ.cs" />
     <Compile Include="Закупка.cs" />
+    <Compile Include="К.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="К.Designer.cs">
+      <DependentUpon>К.cs</DependentUpon>
+    </Compile>
     <Compile Include="Комплектующие.cs" />
     <Compile Include="Мебель.cs" />
     <Compile Include="Клиент.cs" />
     <Compile Include="Поставщик.cs" />
+    <Compile Include="СозЗак.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="СозЗак.Designer.cs">
+      <DependentUpon>СозЗак.cs</DependentUpon>
+    </Compile>
+    <Compile Include="СозЗаяв.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="СозЗаяв.Designer.cs">
+      <DependentUpon>СозЗаяв.cs</DependentUpon>
+    </Compile>
     <Compile Include="Составляющие.cs" />
     <Compile Include="Список заказов.cs" />
+    <Compile Include="Ш.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ш.Designer.cs">
+      <DependentUpon>Ш.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ШК.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ШК.Designer.cs">
+      <DependentUpon>ШК.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
@@ -120,6 +162,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="К.resx">
+      <DependentUpon>К.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="СозЗак.resx">
+      <DependentUpon>СозЗак.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="СозЗаяв.resx">
+      <DependentUpon>СозЗаяв.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ш.resx">
+      <DependentUpon>Ш.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ШК.resx">
+      <DependentUpon>ШК.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AsdDataSet.xsc">
       <DependentUpon>AsdDataSet.xsd</DependentUpon>
     </None>
