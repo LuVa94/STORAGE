@@ -35,6 +35,12 @@ namespace Win
             get;
             set;
         }
+        [Column]
+        public DateTimeOffset Дата_доставки
+        {
+            get;
+            set;
+        }
 
         private EntityRef<Поставщик> ppp;
         [Association(Storage = "ppp", ThisKey = "закупкаID", OtherKey = "поставщикID",
@@ -63,7 +69,7 @@ namespace Win
 
         public override string ToString()
         {
-            return закупкаID + " | " + поставщикID + " | " + комплектующиеID + " | " + Количество;
+            return закупкаID + " | " + поставщикID + " | " + комплектующиеID + " | " + Количество + " | " + Дата_доставки;
         }
     }
     public class DB_zak : DataContext
@@ -83,22 +89,24 @@ namespace Win
                 this.CreateDatabase();
             }
         }
-        public void ADD(int поставщикID, int комплетующиеID, int Количество)
+        public void ADD(int поставщикID, int комплетующиеID, int Количество, DateTimeOffset Дата_доставки)
         {
             Закупка zak = new Закупка();
             zak.поставщикID = поставщикID;
             zak.комплектующиеID = комплетующиеID;
             zak.Количество = Количество;
+            zak.Дата_доставки = Дата_доставки;
             this.Закупка.InsertOnSubmit(zak);
             this.SubmitChanges();
         }
 
-        public void Edit(int закупкаID, int поставщикID, int комплетующиеID, int Количество)
+        public void Edit(int закупкаID, int поставщикID, int комплетующиеID, int Количество, DateTimeOffset Дата_доставки)
         {
             Закупка zak = this.Закупка.Where(c => c.закупкаID == закупкаID).FirstOrDefault();
             zak.поставщикID = поставщикID;
             zak.комплектующиеID = комплетующиеID;
             zak.Количество = Количество;
+            zak.Дата_доставки = Дата_доставки;
             this.SubmitChanges();
         }
 

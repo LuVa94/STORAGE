@@ -37,7 +37,7 @@ namespace Win
             set;
         }
         [Column]
-        public string Материал
+        public int материалID
         {
             get;
             set;
@@ -85,6 +85,18 @@ namespace Win
                 if (value != null) мебельID = value.мебельID;
             }
         }
+        private EntityRef<Материал> m;
+        [Association(Storage = "m", ThisKey = "заказID", OtherKey = "материалID",
+        IsForeignKey = true)]
+        public Материал Материал
+        {
+            get { return m.Entity; }
+            set
+            {
+                m.Entity = value;
+                if (value != null) материалID = value.материалID;
+            }
+        }
         private EntityRef<Клиент> kk;
         [Association(Storage = "kk", ThisKey = "заказID", OtherKey = "клиентID",
         IsForeignKey = true)]
@@ -97,17 +109,10 @@ namespace Win
                 if (value != null) клиентID = value.клиентID;
             }
         }
-        private EntitySet<Список_заказов> ss = new EntitySet<Список_заказов>();
-        [Association(Storage = "ss", OtherKey = "ID")]
-        public EntitySet<Список_заказов> Список_заказов
-        {
-            get { return ss; }
-            set { ss.Assign(value); }
-        }
 
         public override string ToString()
         {
-            return заказID + " | " + Длина + " | " + Ширина + " | " + Глубина + " | " + Материал + " | " + Стоимость + " | " + Дата_выполнения + " | " + Статус + " | " + мебельID + " | " + клиентID;
+            return заказID + " | " + Длина + " | " + Ширина + " | " + Глубина + " | " + мебельID + " | " + Стоимость + " | " + Дата_выполнения + " | " + Статус + " | " + мебельID + " | " + клиентID;
         }
        
     }
@@ -128,13 +133,13 @@ namespace Win
                 this.CreateDatabase();
             }
         }
-        public void ADD(int Длина, int Ширина, int Глубина, string Материал, int Стоимость, DateTimeOffset Дата_выполнения, string Статус, int мебельID, int клиентID)
+        public void ADD(int Длина, int Ширина, int Глубина, int материалID, int Стоимость, DateTimeOffset Дата_выполнения, string Статус, int мебельID, int клиентID)
         {
             Заказ za = new Заказ();
             za.Длина = Длина;
             za.Ширина = Ширина;
             za.Глубина = Глубина;
-            za.Материал= Материал;
+            za.материалID = материалID;
             za.Стоимость = Стоимость;
             za.Дата_выполнения = Дата_выполнения;
             za.Статус = Статус;
@@ -144,13 +149,13 @@ namespace Win
             this.SubmitChanges();
         }
 
-        public void Edit(int заказID, int Длина, int Ширина, int Глубина, string Материал, int Стоимость, DateTimeOffset Дата_выполнения, string Статус, int мебельID, int клиентID)
+        public void Edit(int заказID, int Длина, int Ширина, int Глубина, int материалID, int Стоимость, DateTimeOffset Дата_выполнения, string Статус, int мебельID, int клиентID)
         {
             Заказ za = this.Заказ.Where(c => c.заказID == заказID).FirstOrDefault();
             za.Длина = Длина;
             za.Ширина = Ширина;
             za.Глубина = Глубина;
-            za.Материал = Материал;
+            za.материалID = материалID;
             za.Стоимость = Стоимость;
             za.Дата_выполнения = Дата_выполнения;
             za.Статус = Статус;

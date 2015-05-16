@@ -68,6 +68,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AsdDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AsdDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AsdDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AsdDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AsdDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AsdDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,8 +149,7 @@
     <Compile Include="СозЗаяв.Designer.cs">
       <DependentUpon>СозЗаяв.cs</DependentUpon>
     </Compile>
-    <Compile Include="Составляющие.cs" />
-    <Compile Include="Список заказов.cs" />
+    <Compile Include="Материал.cs" />
     <Compile Include="Ш.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +211,61 @@
     </None>
     <None Include="AsdDataSet.xss">
       <DependentUpon>AsdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet1.xsc">
+      <DependentUpon>AsdDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet1.xss">
+      <DependentUpon>AsdDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet2.xsc">
+      <DependentUpon>AsdDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet2.xss">
+      <DependentUpon>AsdDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet3.xsc">
+      <DependentUpon>AsdDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet3.xss">
+      <DependentUpon>AsdDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet4.xsc">
+      <DependentUpon>AsdDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet4.xss">
+      <DependentUpon>AsdDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet5.xsc">
+      <DependentUpon>AsdDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet5.xss">
+      <DependentUpon>AsdDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

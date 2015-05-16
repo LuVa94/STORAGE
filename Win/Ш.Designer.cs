@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.материалBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.asdDataSet4 = new Win.AsdDataSet4();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
@@ -37,6 +40,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.материалBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asdDataSet3 = new Win.AsdDataSet3();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -47,9 +52,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
@@ -77,7 +80,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.материалTableAdapter = new Win.AsdDataSet3TableAdapters.МатериалTableAdapter();
+            this.материалTableAdapter1 = new Win.AsdDataSet4TableAdapters.МатериалTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet4)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -92,11 +101,23 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.материалBindingSource1;
+            this.comboBox2.DisplayMember = "Название";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(426, 473);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 85;
+            // 
+            // материалBindingSource1
+            // 
+            this.материалBindingSource1.DataMember = "Материал";
+            this.материалBindingSource1.DataSource = this.asdDataSet4;
+            // 
+            // asdDataSet4
+            // 
+            this.asdDataSet4.DataSetName = "AsdDataSet4";
+            this.asdDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -163,11 +184,23 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.материалBindingSource;
+            this.comboBox1.DisplayMember = "Название";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(426, 443);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 80;
+            // 
+            // материалBindingSource
+            // 
+            this.материалBindingSource.DataMember = "Материал";
+            this.материалBindingSource.DataSource = this.asdDataSet3;
+            // 
+            // asdDataSet3
+            // 
+            this.asdDataSet3.DataSetName = "AsdDataSet3";
+            this.asdDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox3
             // 
@@ -238,7 +271,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(911, 240);
+            this.button2.Location = new System.Drawing.Point(891, 212);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 32);
             this.button2.TabIndex = 71;
@@ -248,60 +281,36 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton15);
             this.panel2.Controls.Add(this.radioButton16);
-            this.panel2.Controls.Add(this.radioButton14);
             this.panel2.Controls.Add(this.radioButton13);
             this.panel2.Controls.Add(this.radioButton12);
             this.panel2.Controls.Add(this.radioButton11);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(860, 43);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(178, 174);
+            this.panel2.Size = new System.Drawing.Size(126, 134);
             this.panel2.TabIndex = 67;
-            // 
-            // radioButton15
-            // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(4, 140);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(160, 17);
-            this.radioButton15.TabIndex = 31;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "Пластиковая вставка(все)";
-            this.radioButton15.UseVisualStyleBackColor = true;
             // 
             // radioButton16
             // 
             this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(3, 117);
+            this.radioButton16.Location = new System.Drawing.Point(3, 94);
             this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(155, 17);
+            this.radioButton16.Size = new System.Drawing.Size(91, 17);
             this.radioButton16.TabIndex = 30;
             this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "Бамбуковая вставка(все)";
+            this.radioButton16.Text = "Вставка(все)";
             this.radioButton16.UseVisualStyleBackColor = true;
-            // 
-            // radioButton14
-            // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(3, 94);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(172, 17);
-            this.radioButton14.TabIndex = 27;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "Пластиковая вставка(двери)";
-            this.radioButton14.UseVisualStyleBackColor = true;
             // 
             // radioButton13
             // 
             this.radioButton13.AutoSize = true;
             this.radioButton13.Location = new System.Drawing.Point(3, 71);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(167, 17);
+            this.radioButton13.Size = new System.Drawing.Size(103, 17);
             this.radioButton13.TabIndex = 26;
             this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "Бамбуковая вставка(двери)";
+            this.radioButton13.Text = "Вставка(двери)";
             this.radioButton13.UseVisualStyleBackColor = true;
             // 
             // radioButton12
@@ -560,6 +569,14 @@
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             // 
+            // материалTableAdapter
+            // 
+            this.материалTableAdapter.ClearBeforeFill = true;
+            // 
+            // материалTableAdapter1
+            // 
+            this.материалTableAdapter1.ClearBeforeFill = true;
+            // 
             // Ш
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,8 +622,12 @@
             this.Name = "Ш";
             this.Text = "Ш";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -645,9 +666,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton15;
         private System.Windows.Forms.RadioButton radioButton16;
-        private System.Windows.Forms.RadioButton radioButton14;
         private System.Windows.Forms.RadioButton radioButton13;
         private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.RadioButton radioButton11;
@@ -675,5 +694,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private AsdDataSet3 asdDataSet3;
+        private System.Windows.Forms.BindingSource материалBindingSource;
+        private AsdDataSet3TableAdapters.МатериалTableAdapter материалTableAdapter;
+        private AsdDataSet4 asdDataSet4;
+        private System.Windows.Forms.BindingSource материалBindingSource1;
+        private AsdDataSet4TableAdapters.МатериалTableAdapter материалTableAdapter1;
     }
 }

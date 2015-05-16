@@ -28,6 +28,8 @@ namespace Win
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "asdDataSet5.Материал". При необходимости она может быть перемещена или удалена.
+            this.материалTableAdapter.Fill(this.asdDataSet5.Материал);
            
 
             Bitmap bmp1 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -119,11 +121,20 @@ namespace Win
             gr6.DrawLine(p, 140, 0, 140, 100);
             gr6.DrawLine(q, 60, 26, 140, 26);
             pictureBox6.Image = bmp6;
+
+            button1.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             eskiz1 = true;
+            //button1.Enabled = false;
+            button3.Enabled = true;
+            button4.Enabled = false;
+            button5.Enabled = false;
             // Bitmap bmp7 = new Bitmap(pictureBox7.Width, pictureBox7.Height);
             Graphics gr7 = Graphics.FromImage(bmp7);
             gr7.FillRectangle(Brushes.SlateGray, 0, 0, 300, 200);
@@ -196,6 +207,10 @@ namespace Win
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            //button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
             // Bitmap bmp7 = new Bitmap(pictureBox7.Width, pictureBox7.Height);
             Graphics gr7 = Graphics.FromImage(bmp7);
             gr7.FillRectangle(Brushes.SlateGray, 0, 0, 300, 200);
@@ -397,6 +412,10 @@ namespace Win
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //button1.Enabled = false;
+            //button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = true;
             eskiz2 = true;
             // Bitmap bmp8 = new Bitmap(pictureBox8.Width, pictureBox8.Height);
             Graphics gr8 = Graphics.FromImage(bmp8);
@@ -519,6 +538,8 @@ namespace Win
 
         private void button5_Click(object sender, EventArgs e)
         {
+           
+            button4.Enabled = true;
             Form2 f2 = new Form2();
             f2.ShowDialog();
         }

@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -90,7 +89,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Tan;
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton8);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton7);
             this.groupBox1.Controls.Add(this.radioButton3);
@@ -99,7 +97,7 @@
             this.groupBox1.Controls.Add(this.radioButton5);
             this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(175, 205);
+            this.groupBox1.Size = new System.Drawing.Size(175, 184);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выберите таблицу для работы";
@@ -114,17 +112,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Мебель";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(6, 180);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(107, 17);
-            this.radioButton8.TabIndex = 8;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Список заказов";
-            this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -142,10 +129,10 @@
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(6, 157);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(102, 17);
+            this.radioButton7.Size = new System.Drawing.Size(75, 17);
             this.radioButton7.TabIndex = 7;
             this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Составляющие";
+            this.radioButton7.Text = "Материал";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // radioButton3
@@ -601,6 +588,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Menu";
             this.Text = "Главное меню";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -615,7 +603,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton3;

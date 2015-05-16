@@ -27,8 +27,7 @@ namespace Win
         //Program.db_sost Program.db5 = new Program.db_sost(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
         //Program.db_zak Program.db6 = new Program.db_zak(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
         //Program.db_zakaz Program.db7 = new Program.db_zakaz(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        //Program.db_szak Program.db8 = new Program.db_szak(@"Data Source=(LocalProgram.db)\v11.0;AttachProgram.dbFilename=c:\users\user\documents\visual studio 2013\Projects\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-     
+        
         
         public void Out()
         {
@@ -43,7 +42,7 @@ namespace Win
             }
             if (radioButton4.Checked == true)
             {
-                label11.Text = ("комплектующиеID" + " | " + "Название" + " | " + "Количество" + " | " + "Дата_поступления" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Стоимость");
+                label11.Text = ("комплектующиеID" + " | " + "Название" + " | " + "Количество"  + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Стоимость");
                 var k = Program.db3.Vivod(0);
                 foreach (Комплектующие kom in k)
                 {
@@ -70,16 +69,16 @@ namespace Win
             }
             if (radioButton7.Checked == true)
             {
-                label11.Text = ("составляющиеID" + " | " + "мебельID" + " | " + "комплектующиеID" + " | " + "Количество");
+                label11.Text = ("материалID" + " | " + "Название");
                 var sos = Program.db5.Vivod(0);
-                foreach (Составляющие sost in sos)
+                foreach (Материал sost in sos)
                 {
                     listBox1.Items.Add(sost);
                 }
             }
             if (radioButton6.Checked == true)
             {
-                label11.Text = ("закупкаID" + " | " + "поставщикID" + " | " + "комплектующиеID" + " | " + "Количество");
+                label11.Text = ("закупкаID" + " | " + "поставщикID" + " | " + "комплектующиеID" + " | " + "Количество" + " | " + "Дата доставки");
                 var zz = Program.db6.Vivod(0);
                 foreach (Закупка zak in zz)
                 {
@@ -88,22 +87,14 @@ namespace Win
             }
             if (radioButton5.Checked == true)
             {
-                label11.Text = ("заказID" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Материал" + " | " + "Стоимость" + " | " + "Дата_выполнения" + " | " + "Статус" + " | " + "мебельID" + " | " + "клиентID");
+                label11.Text = ("заказID" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "материалID" + " | " + "Стоимость" + " | " + "Дата_выполнения" + " | " + "Статус" + " | " + "мебельID" + " | " + "клиентID");
                 var q = Program.db7.Vivod(0);
                 foreach (Заказ za in q)
                 {
                     listBox1.Items.Add(za);
                 }
             }
-            if (radioButton8.Checked == true)
-            {
-                label11.Text = ("ID" + " | " + "заказID" + " | " + "мебельID" + " | " + "Количество");
-                var sz = Program.db8.Vivod(0);
-                foreach (Список_заказов szak in sz)
-                {
-                    listBox1.Items.Add(szak);
-                }
-            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -146,11 +137,11 @@ namespace Win
             {
                 label1.Text = "Название";
                 label2.Text = "Количество";
-                label3.Text = "Дата поступления(ГГ-ММ-ДД)";
-                label4.Text = "Длина";
-                label5.Text = "Ширина";
-                label6.Text = "Глубина";
-                label7.Text = "Стоимость";
+                label3.Text = "Длина";
+                label4.Text = "Ширина";
+                label5.Text = "Глубина";
+                label6.Text = "Стоимость";
+                label7.Text = "----------";
                 label8.Text = "----------";
                 label12.Text = "----------";
             }
@@ -168,9 +159,9 @@ namespace Win
             }
             if (radioButton7.Checked == true)
             {
-                label1.Text = "мебельID";
-                label2.Text = "комплетующиеID";
-                label3.Text = "Количество";
+                label1.Text = "Название";
+                label2.Text = "----------";
+                label3.Text = "----------";
                 label4.Text = "----------";
                 label5.Text = "----------";
                 label6.Text = "----------";
@@ -178,24 +169,13 @@ namespace Win
                 label8.Text = "----------";
                 label12.Text = "----------";
             }
-            if (radioButton8.Checked == true)
-            {
-                label1.Text = "заказID";
-                label2.Text = "мебельID";
-                label3.Text = "Количество";
-                label4.Text = "----------";
-                label5.Text = "----------";
-                label6.Text = "----------";
-                label7.Text = "----------";
-                label8.Text = "----------";
-                label12.Text = "----------";
-            }
+           
             if (radioButton6.Checked == true)
             {
                 label1.Text = "поставщикID";
                 label2.Text = "комплетующиеID";
                 label3.Text = "Количество";
-                label4.Text = "----------";
+                label4.Text = "Дата доставки(ГГ-ММ-ДД)";
                 label5.Text = "----------";
                 label6.Text = "----------";
                 label7.Text = "----------";
@@ -207,7 +187,7 @@ namespace Win
                 label1.Text = "Длина";
                 label2.Text = "Ширина";
                 label3.Text = "Глубина";
-                label4.Text = "Материал";
+                label4.Text = "материалID";
                 label5.Text = "Стоимость";
                 label6.Text = "Дата выполнения(ГГ-ММ-ДД)";
                 label7.Text = "Статус";
@@ -271,7 +251,7 @@ namespace Win
 
                 try
                 {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == "") || (textBox7.Text == ""))
+                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -279,14 +259,13 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db3.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToDateTime(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox7.Text));
+                Program.db3.ADD(textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
                 textBox6.Text = "";
-                textBox7.Text = "";
                 MessageBox.Show("Новая запись добавлена");
                 Out();
 
@@ -316,7 +295,7 @@ namespace Win
 
                 try
                 {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
+                    if ((textBox1.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -324,7 +303,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db5.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db5.ADD((textBox1.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -332,33 +311,13 @@ namespace Win
                 Out();
 
             }
-            if (radioButton8.Checked == true)
-            {
-
-                try
-                {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
-                    {
-                        MessageBox.Show("Часть полей не заполнено");
-                        return;
-                    }
-                }
-                catch { }
-                listBox1.Items.Clear();
-                Program.db8.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                MessageBox.Show("Новая запись добавлена");
-                Out();
-
-            }
+           
             if (radioButton6.Checked == true)
             {
 
                 try
                 {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
+                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -366,10 +325,11 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db6.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db6.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToDateTime(textBox4.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
+                textBox4.Text = "";
                 MessageBox.Show("Новая запись добавлена");
                 Out();
 
@@ -392,7 +352,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db7.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
+                Program.db7.ADD(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -434,6 +394,8 @@ namespace Win
                 listBox1.Items.Clear();
                 string str1;
                 int str2, str3, str4, r;
+               // int x = listBox1.SelectedIndex+1;
+               // textBox9.Text = x.ToString();
                 str1 = textBox1.Text;
                 str2 = Convert.ToInt32(textBox2.Text);
                 str3 = Convert.ToInt32(textBox3.Text);
@@ -483,7 +445,7 @@ namespace Win
             {
                 try
                 {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == "") || (textBox7.Text == ""))
+                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (textBox4.Text == "") || (textBox5.Text == "") || (textBox6.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -502,14 +464,13 @@ namespace Win
                 str2 = textBox2.Text;
                 str3 = textBox3.Text;
                 r = Convert.ToInt32(textBox9.Text);
-                Program.db3.Edit(r, textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToDateTime(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text), Convert.ToInt32(textBox7.Text));
+                Program.db3.Edit(r, textBox1.Text, Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToInt32(textBox6.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
                 textBox6.Text = "";
-                textBox7.Text = "";
                 MessageBox.Show("Редактирование записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -547,7 +508,7 @@ namespace Win
             {
                 try
                 {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
+                    if ((textBox1.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -562,7 +523,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                Program.db5.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db5.Edit(r, (textBox1.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -570,33 +531,7 @@ namespace Win
                 textBox9.Text = "";
                 Out();
             }
-            if (radioButton8.Checked == true)
-            {
-                try
-                {
-                    if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == ""))
-                    {
-                        MessageBox.Show("Часть полей не заполнено");
-                        return;
-                    }
-                    if (textBox9.Text == "")
-                    {
-                        MessageBox.Show("Поле ID не заполнено");
-                        return;
-                    }
-                }
-                catch { }
-                listBox1.Items.Clear();
-                int r;
-                r = Convert.ToInt32(textBox9.Text);
-                Program.db8.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                MessageBox.Show("Редактирование записи с ID " + textBox9.Text + " завершено");
-                textBox9.Text = "";
-                Out();
-            }
+            
             if (radioButton6.Checked == true)
             {
                 try
@@ -616,10 +551,11 @@ namespace Win
                 listBox1.Items.Clear();
                 int r;
                 r = Convert.ToInt32(textBox9.Text);
-                Program.db6.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text));
+                Program.db6.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToDateTime(textBox4.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
+                textBox4.Text = "";
                 MessageBox.Show("Редактирование записи с ID " + textBox9.Text + " завершено");
                 textBox9.Text = "";
                 Out();
@@ -648,7 +584,7 @@ namespace Win
                 listBox1.Items.Clear();
                 int  r;
                 r = Convert.ToInt32(textBox9.Text);
-                Program.db7.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), textBox4.Text, Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
+                Program.db7.Edit(r, Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text), Convert.ToDateTime(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text), Convert.ToInt32(textBox10.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -761,25 +697,7 @@ namespace Win
                 textBox9.Text = "";
                 Out();
             }
-            if (radioButton8.Checked == true)
-            {
-                try
-                {
-                    if (textBox9.Text == "")
-                    {
-                        MessageBox.Show("Поле ID не заполнено");
-                        return;
-                    }
-                }
-                catch { }
-                listBox1.Items.Clear();
-                int r;
-                r = Convert.ToInt32(textBox9.Text);
-                Program.db8.Delete(r);
-                MessageBox.Show("Удаление записи с ID " + textBox9.Text + " завершено");
-                textBox9.Text = "";
-                Out();
-            }
+            
             if (radioButton6.Checked == true)
             {
                 try
@@ -842,12 +760,16 @@ namespace Win
         {
             pictureBox1.Height=0;
             pictureBox1.Width = 0;
+            button1.Enabled = false;
+            button7.Enabled = true;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             pictureBox1.Height = 272;
             pictureBox1.Width = 465;
+            button7.Enabled = false;
+            button1.Enabled = true;
         }
 
         private void создатьЗаказToolStripMenuItem_Click(object sender, EventArgs e)
@@ -860,6 +782,11 @@ namespace Win
         {
             СозЗаяв qwe = new СозЗаяв();
             qwe.ShowDialog();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            button7.Enabled = false;
         }
     }
 }

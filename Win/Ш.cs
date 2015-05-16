@@ -28,6 +28,10 @@ namespace Win
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "asdDataSet4.Материал". При необходимости она может быть перемещена или удалена.
+            this.материалTableAdapter1.Fill(this.asdDataSet4.Материал);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "asdDataSet3.Материал". При необходимости она может быть перемещена или удалена.
+            this.материалTableAdapter.Fill(this.asdDataSet3.Материал);
             Bitmap bmp2 = new Bitmap(pictureBox2.Width, pictureBox2.Height);
             Graphics gr2 = Graphics.FromImage(bmp2);
             Bitmap bmp3 = new Bitmap(pictureBox3.Width, pictureBox3.Height);
@@ -120,11 +124,18 @@ namespace Win
             gr7.DrawLine(w, 30, 95, 60, 95);
             gr7.DrawLine(w, 30, 110, 60, 110);
             pictureBox7.Image = bmp7;
+
+            button2.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             eskiz1 = true;
+            button2.Enabled = true;
+            button4.Enabled = false;
+            button5.Enabled = false;
             // Bitmap bmp1 = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             Graphics gr1 = Graphics.FromImage(bmp1);
             Pen p = new Pen(Brushes.Black, 3);
@@ -173,6 +184,9 @@ namespace Win
         private void button2_Click(object sender, EventArgs e)
         {
             eskiz2 = true;
+            button5.Enabled = true;
+            button4.Enabled = false;
+            button1.Enabled = false;
             // Bitmap bmp8 = new Bitmap(pictureBox8.Width, pictureBox8.Height);
             Graphics gr8 = Graphics.FromImage(bmp8);
             Pen p = new Pen(Brushes.Black, 3);
@@ -208,13 +222,13 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 155, 10, 10);
                     gr8.DrawEllipse(w, 105, 155, 10, 10);
                 }
-                if (radioButton14.Checked == true)
-                {
-                    gr8.FillRectangle(Brushes.Yellow, 0, 0, 200, 300);
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawEllipse(w, 85, 155, 10, 10);
-                    gr8.DrawEllipse(w, 105, 155, 10, 10);
-                }
+                //if (radioButton14.Checked == true)
+                //{
+                //    gr8.FillRectangle(Brushes.Yellow, 0, 0, 200, 300);
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawEllipse(w, 85, 155, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 155, 10, 10);
+                //}
             }
 
             if (radioButton2.Checked == true)
@@ -251,17 +265,17 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 230, 8, 8);
                     gr8.DrawEllipse(w, 105, 230, 8, 8);
                 }
-                if (radioButton14.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawEllipse(w, 85, 230, 8, 8);
-                    gr8.DrawEllipse(w, 105, 230, 8, 8);
-                }
+                //if (radioButton14.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 85, 230, 8, 8);
+                //    gr8.DrawEllipse(w, 105, 230, 8, 8);
+                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 300);
@@ -275,19 +289,19 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 230, 8, 8);
                     gr8.DrawEllipse(w, 105, 230, 8, 8);
                 }
-                if (radioButton15.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 230, 80, 60);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 230, 80, 60);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawEllipse(w, 85, 230, 8, 8);
-                    gr8.DrawEllipse(w, 105, 230, 8, 8);
-                }
+                //if (radioButton15.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 230, 80, 60);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 230, 80, 60);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 85, 230, 8, 8);
+                //    gr8.DrawEllipse(w, 105, 230, 8, 8);
+                //}
             }
             if (radioButton3.Checked == true)
             {
@@ -323,17 +337,17 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 65, 8, 8);
                     gr8.DrawEllipse(w, 105, 65, 8, 8);
                 }
-                if (radioButton14.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawLine(p, 0, 80, 200, 80);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 90, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 90, 80, 200);
-                    gr8.DrawEllipse(w, 85, 160, 10, 10);
-                    gr8.DrawEllipse(w, 105, 160, 10, 10);
-                    gr8.DrawEllipse(w, 85, 65, 8, 8);
-                    gr8.DrawEllipse(w, 105, 65, 8, 8);
-                }
+                //if (radioButton14.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawLine(p, 0, 80, 200, 80);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 90, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 90, 80, 200);
+                //    gr8.DrawEllipse(w, 85, 160, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 160, 10, 10);
+                //    gr8.DrawEllipse(w, 85, 65, 8, 8);
+                //    gr8.DrawEllipse(w, 105, 65, 8, 8);
+                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 300);
@@ -347,19 +361,19 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 65, 8, 8);
                     gr8.DrawEllipse(w, 105, 65, 8, 8);
                 }
-                if (radioButton15.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawLine(p, 0, 80, 200, 80);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 90, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 90, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 60);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 60);
-                    gr8.DrawEllipse(w, 85, 160, 10, 10);
-                    gr8.DrawEllipse(w, 105, 160, 10, 10);
-                    gr8.DrawEllipse(w, 85, 65, 8, 8);
-                    gr8.DrawEllipse(w, 105, 65, 8, 8);
-                }
+                //if (radioButton15.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawLine(p, 0, 80, 200, 80);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 90, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 90, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 60);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 60);
+                //    gr8.DrawEllipse(w, 85, 160, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 160, 10, 10);
+                //    gr8.DrawEllipse(w, 85, 65, 8, 8);
+                //    gr8.DrawEllipse(w, 105, 65, 8, 8);
+                //}
             }
             if (radioButton4.Checked == true)
             {
@@ -395,17 +409,17 @@ namespace Win
                     gr8.DrawLine(w, 30, 230, 70, 230);
                     gr8.DrawLine(w, 130, 230, 170, 230);
                 }
-                if (radioButton14.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawLine(w, 30, 230, 70, 230);
-                    gr8.DrawLine(w, 130, 230, 170, 230);
-                }
+                //if (radioButton14.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawLine(w, 30, 230, 70, 230);
+                //    gr8.DrawLine(w, 130, 230, 170, 230);
+                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 300);
@@ -419,19 +433,19 @@ namespace Win
                     gr8.DrawLine(w, 30, 230, 70, 230);
                     gr8.DrawLine(w, 130, 230, 170, 230);
                 }
-                if (radioButton15.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 300);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 230, 80, 60);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 230, 80, 60);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawLine(w, 30, 230, 70, 230);
-                    gr8.DrawLine(w, 130, 230, 170, 230);
-                }
+                //if (radioButton15.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 300);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 230, 80, 60);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 230, 80, 60);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawLine(w, 30, 230, 70, 230);
+                //    gr8.DrawLine(w, 130, 230, 170, 230);
+                //}
             }
             if (radioButton5.Checked == true)
             {
@@ -464,16 +478,16 @@ namespace Win
                     gr8.DrawEllipse(w, 105, 120, 10, 10);
                     gr8.DrawLine(w, 80, 230, 120, 230);
                 }
-                if (radioButton14.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 220);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawLine(w, 80, 230, 120, 230);
-                }
+                //if (radioButton14.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 220);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawLine(w, 80, 230, 120, 230);
+                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 220);
@@ -485,17 +499,17 @@ namespace Win
                     gr8.DrawEllipse(w, 105, 120, 10, 10);
                     gr8.DrawLine(w, 80, 230, 120, 230);
                 }
-                if (radioButton15.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 220);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 230, 180, 60);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawLine(w, 80, 230, 120, 230);
-                }
+                //if (radioButton15.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 220);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 230, 180, 60);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawLine(w, 80, 230, 120, 230);
+                //}
             }
             if (radioButton6.Checked == true)
             {
@@ -534,18 +548,18 @@ namespace Win
                     gr8.DrawLine(w, 80, 230, 120, 230);
                     gr8.DrawLine(w, 80, 270, 120, 270);
                 }
-                if (radioButton14.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 220);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.DrawLine(p, 0, 260, 200, 260);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawLine(w, 80, 230, 120, 230);
-                    gr8.DrawLine(w, 80, 270, 120, 270);
-                }
+                //if (radioButton14.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 220);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.DrawLine(p, 0, 260, 200, 260);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawLine(w, 80, 230, 120, 230);
+                //    gr8.DrawLine(w, 80, 270, 120, 270);
+                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 220);
@@ -560,20 +574,20 @@ namespace Win
                     gr8.DrawLine(w, 80, 230, 120, 230);
                     gr8.DrawLine(w, 80, 270, 120, 270);
                 }
-                if (radioButton15.Checked == true)
-                {
-                    gr8.DrawLine(p, 100, 0, 100, 220);
-                    gr8.DrawLine(p, 0, 220, 200, 220);
-                    gr8.DrawLine(p, 0, 260, 200, 260);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 230, 180, 20);
-                    gr8.FillRectangle(Brushes.Yellow, 10, 270, 180, 20);
-                    gr8.DrawEllipse(w, 85, 120, 10, 10);
-                    gr8.DrawEllipse(w, 105, 120, 10, 10);
-                    gr8.DrawLine(w, 80, 230, 120, 230);
-                    gr8.DrawLine(w, 80, 270, 120, 270);
-                }
+                //if (radioButton15.Checked == true)
+                //{
+                //    gr8.DrawLine(p, 100, 0, 100, 220);
+                //    gr8.DrawLine(p, 0, 220, 200, 220);
+                //    gr8.DrawLine(p, 0, 260, 200, 260);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 200);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 230, 180, 20);
+                //    gr8.FillRectangle(Brushes.Yellow, 10, 270, 180, 20);
+                //    gr8.DrawEllipse(w, 85, 120, 10, 10);
+                //    gr8.DrawEllipse(w, 105, 120, 10, 10);
+                //    gr8.DrawLine(w, 80, 230, 120, 230);
+                //    gr8.DrawLine(w, 80, 270, 120, 270);
+                //}
             }
             pictureBox8.Image = bmp8;
         }
@@ -653,6 +667,9 @@ namespace Win
 
         private void button5_Click(object sender, EventArgs e)
         {
+            button4.Enabled = true;
+            button1.Enabled = false;
+            button2.Enabled = false;
             Form2 f2 = new Form2();
             f2.ShowDialog();
         }

@@ -21,8 +21,6 @@ namespace Win
        
         private void button2_Click(object sender, EventArgs e)
         {
-            bool w1=true;
-            int n = 0;
             try
             {
                 if (textBox1.Text == "")
@@ -30,47 +28,53 @@ namespace Win
             }
             catch { }
             var q = Program.db7.Vivod(0);
-           
-            foreach (Заказ z in q)
+
+            var lin =
+            from a in q
+            where (a.заказID == Convert.ToInt32(textBox1.Text))
+            select a;
+            foreach (var a in lin)
             {
-                 w1 = Convert.ToInt32(textBox1.Text).Equals(z.заказID);
-                 n = z.заказID;
-
-            }
-                try
-                {
-                    if (w1 != true)
-                    {
-                        MessageBox.Show("Заказа с данным номером не существует");
-                        return;
-                    }
-
-                }
-                catch { }
-                foreach (Заказ z in q)
-                {
-                    if (z.заказID == n)
-                {
-                    int num = z.заказID;
-                    int s1 = z.Длина;
-                    int s2 = z.Ширина;
-                    int s3 = z.Глубина;
-                    string  s4 = z.Материал;
-                    int s5 = z.Стоимость;
-                    DateTimeOffset s6 = z.Дата_выполнения;
+                
+                    int num = a.заказID;
+                    int s1 = a.Длина;
+                    int s2 = a.Ширина;
+                    int s3 = a.Глубина;
+                    int  s4 = a.материалID;
+                    int s5 = a.Стоимость;
+                    DateTimeOffset s6 = a.Дата_выполнения;
                     string s7= "oplacheno";
-                    int s9 = z.клиентID;
-                    int s8 = z.мебельID;
+                    int s9 = a.клиентID;
+                    int s8 = a.мебельID;
                     Program.db7.Edit(num, s1,s2,s3,s4,s5,s6,s7,s8,s9);
                     MessageBox.Show("Заказ оплачен");
                 }
+
+            var lin1 =
+          from b in q
+          where (Convert.ToInt32(textBox1.Text) > b.заказID + 1)
+          select 0;
+
+            foreach (var b in lin1)
+            {
+                MessageBox.Show("Заказа с данным номером не существует");
+                return;
             }
-               
-        }
+
+     }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+        }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            button2.Enabled = true;
         }
     }
 }

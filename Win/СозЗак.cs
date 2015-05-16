@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp;
+using System.IO;
+using iTextSharp.text.pdf;
 
 namespace Win
 {
@@ -114,9 +118,15 @@ namespace Win
             //выбор уже существующего эскиза
             if (radioButton6.Checked == true)
             {
-                var ofd = new OpenFileDialog();
-                string nazv = textBox4.Text;
-                System.Diagnostics.Process.Start(way+nazv+".pdf");
+                
+                if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                   
+                    System.IO.StreamReader sr = new
+                       System.IO.StreamReader(openFileDialog1.FileName);
+                    System.Diagnostics.Process.Start( openFileDialog1.FileName);
+                    sr.Close();
+                }
                    
             }
         }

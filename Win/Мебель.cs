@@ -42,26 +42,12 @@ namespace Win
             set;
         }
 
-        private EntitySet<Составляющие> sost = new EntitySet<Составляющие>();
-        [Association(Storage = "sost", OtherKey = "мебельID")]
-        public EntitySet<Составляющие> Составляющие
-        {
-            get { return sost; }
-            set { sost.Assign(value); }
-        }
         private EntitySet<Заказ> zz = new EntitySet<Заказ>();
         [Association(Storage = "zz", OtherKey = "заказID")]
         public EntitySet<Заказ> Заказ
         {
             get { return zz; }
             set { zz.Assign(value); }
-        }
-        private EntitySet<Список_заказов> sz = new EntitySet<Список_заказов>();
-        [Association(Storage = "sz", OtherKey = "ID")]
-        public EntitySet<Список_заказов> Список_заказов
-        {
-            get { return sz; }
-            set { sz.Assign(value); }
         }
 
         public override string ToString()

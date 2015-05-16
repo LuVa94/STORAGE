@@ -26,8 +26,7 @@ namespace Win
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool w1 = true;
-            int n = 0;
+            
             try
             {
                 if (textBox1.Text == "")
@@ -37,33 +36,27 @@ namespace Win
                 }
             }
             catch { }
-            var q = Program.db7.Vivod(0);
-            foreach (Заказ z in q)
-            {
-                w1 = Convert.ToInt32(textBox1.Text).Equals(z.заказID);
-                n = z.заказID;
-            }
-                try
-                {
-                    if (w1 != true)
-                    {
-                        MessageBox.Show("Заказа с данным номером не существует");
-                        return;
-                    }
 
-                }
-                catch { }
+            var q = Program.db7.Vivod(0);
             
-            foreach (Заказ z in q)
+            var lin =
+             from a in q
+             where (a.заказID == Convert.ToInt32(textBox1.Text))
+             select a.Статус;
+            foreach (var a in lin)
+                MessageBox.Show(a);
+
+            var lin1 =
+            from b in q
+            where (Convert.ToInt32(textBox1.Text) > b.заказID+1)
+            select 0;
+
+            foreach (var b in lin1)
             {
-                if (z.заказID == n)
-                {
-                    MessageBox.Show(z.Статус);
-                } 
+                MessageBox.Show("Заказа с данным номером не существует");
+                return;
             }
-                
-            
-            
+           
         }
     }
 }

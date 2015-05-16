@@ -31,12 +31,7 @@ namespace Win
             get;
             set;
         }
-        [Column]
-        public  DateTimeOffset Дата_поступления
-        {
-            get;
-            set;
-        }
+       
         [Column]
         public int Длина
         {
@@ -69,18 +64,11 @@ namespace Win
             get { return post; }
             set { post.Assign(value); }
         }
-        private EntitySet<Составляющие> sost = new EntitySet<Составляющие>();
-        [Association(Storage = "sost", OtherKey = "комплектующиеID")]
-        public EntitySet<Составляющие> Составляющие
-        {
-            get { return sost; }
-            set { sost.Assign(value); }
-        }
        
 
         public override string ToString()
         {
-            return комплектующиеID + " | " + Название + " | " + Количество + " | " + Дата_поступления + " | " + Длина + " | " + Ширина + " | " + Глубина + " | " + Стоимость;
+            return комплектующиеID + " | " + Название + " | " + Количество + " | "  + Длина + " | " + Ширина + " | " + Глубина + " | " + Стоимость;
         }
 
     }
@@ -101,12 +89,11 @@ namespace Win
                 this.CreateDatabase();
             }
         }
-        public void ADD(string Название, int Количество, DateTimeOffset Дата_поступления, int Длина, int Ширина, int Глубина, int Стоимость)
+        public void ADD(string Название, int Количество,  int Длина, int Ширина, int Глубина, int Стоимость)
         {
             Комплектующие kom = new Комплектующие();
             kom.Название=Название;
             kom.Количество = Количество;
-            kom.Дата_поступления = Дата_поступления;
             kom.Длина = Длина;
             kom.Ширина = Ширина;
             kom.Глубина = Глубина;
@@ -115,17 +102,15 @@ namespace Win
             this.SubmitChanges();
         }
 
-        public void Edit(int комплектующиеID, string Название, int Количество, DateTimeOffset Дата_поступления, int Длина, int Ширина, int Глубина, int Стоимость)
+        public void Edit(int комплектующиеID, string Название, int Количество,  int Длина, int Ширина, int Глубина, int Стоимость)
         {
             Комплектующие kom = this.Комплектующие.Where(c => c.комплектующиеID == комплектующиеID).FirstOrDefault();
             kom.Название = Название;
             kom.Количество = Количество;
-            kom.Дата_поступления = Дата_поступления;
             kom.Длина = Длина;
             kom.Ширина = Ширина;
             kom.Глубина = Глубина;
             kom.Стоимость = Стоимость;
-            this.Комплектующие.InsertOnSubmit(kom);
             this.SubmitChanges();
         }
 
