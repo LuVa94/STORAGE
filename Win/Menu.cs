@@ -740,19 +740,19 @@ namespace Win
 
         private void проверкаСтатусаЗаказаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 f6 = new Form6();
+            Statys f6 = new Statys();
             f6.ShowDialog();
         }
 
         private void оплатитьЗаказToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form7 f7 = new Form7();
+            Oplata f7 = new Oplata();
             f7.ShowDialog();
         }
 
         private void эскизИСтоимостьПолученнойМебелиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            ViborMeb f1 = new ViborMeb();
             f1.ShowDialog();
         }
 

@@ -35,6 +35,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.материалBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.asdDataSet5 = new Win.AsdDataSet5();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,9 +80,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.asdDataSet5 = new Win.AsdDataSet5();
-            this.материалBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.материалTableAdapter = new Win.AsdDataSet5TableAdapters.МатериалTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet5)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -93,8 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -141,6 +141,16 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 64;
+            // 
+            // материалBindingSource
+            // 
+            this.материалBindingSource.DataMember = "Материал";
+            this.материалBindingSource.DataSource = this.asdDataSet5;
+            // 
+            // asdDataSet5
+            // 
+            this.asdDataSet5.DataSetName = "AsdDataSet5";
+            this.asdDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox3
             // 
@@ -555,16 +565,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // asdDataSet5
-            // 
-            this.asdDataSet5.DataSetName = "AsdDataSet5";
-            this.asdDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // материалBindingSource
-            // 
-            this.материалBindingSource.DataMember = "Материал";
-            this.материалBindingSource.DataSource = this.asdDataSet5;
-            // 
             // материалTableAdapter
             // 
             this.материалTableAdapter.ClearBeforeFill = true;
@@ -573,7 +573,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1052, 550);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox4);
@@ -613,6 +614,8 @@
             this.Name = "ШК";
             this.Text = "ШК";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet5)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -629,8 +632,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asdDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

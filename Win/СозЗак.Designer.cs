@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(СозЗак));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -88,7 +89,7 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(404, 344);
+            this.panel1.Size = new System.Drawing.Size(390, 344);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -280,8 +281,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(412, 356);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(415, 367);
             this.Controls.Add(this.panel1);
             this.Name = "СозЗак";
             this.Text = "СозЗак";

@@ -1,6 +1,6 @@
 ﻿namespace Win
 {
-    partial class Form7
+    partial class Oplata
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Oplata));
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -93,11 +94,12 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Вы уверенны?\r\n";
             // 
-            // Form7
+            // Oplata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.ControlBox = false;
             this.Controls.Add(this.checkBox3);
@@ -107,7 +109,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Form7";
+            this.Name = "Oplata";
             this.Text = "Оплата заказа";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);

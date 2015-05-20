@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Win
 {
-    public partial class Form2 : Form
+    public partial class StimostDatetime : Form
     {
-        public Form2()
+        public StimostDatetime()
         {
             InitializeComponent();
         }

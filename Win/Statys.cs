@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Win
 {
-    public partial class Form6 : Form
+    public partial class Statys : Form
     {
-        public Form6()
+        public Statys()
         {
             InitializeComponent();
         }

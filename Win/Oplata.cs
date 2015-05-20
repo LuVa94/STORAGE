@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Win
 {
-    public partial class Form7 : Form
+    public partial class Oplata : Form
     {
-        public Form7()
+        public Oplata()
         {
             InitializeComponent();
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ш));
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.материалBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.asdDataSet4 = new Win.AsdDataSet4();
@@ -581,7 +582,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1043, 516);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label5);

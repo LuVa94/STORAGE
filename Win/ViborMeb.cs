@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Win
 {
-    public partial class Form1 : Form
+    public partial class ViborMeb : Form
     {
-        public Form1()
+        public ViborMeb()
         {
             InitializeComponent();
         }
@@ -50,16 +50,19 @@ namespace Win
             {
                 ШК sh = new ШК();
                 sh.ShowDialog();
+                Program.vibormeb = 1;
             }
             if (w4 != false)
             {
                 Ш s = new Ш();
                 s.ShowDialog();
+                Program.vibormeb = 2;
             }
             if (w5 != false)
             {
                 К k = new К();
                 k.ShowDialog();
+                Program.vibormeb = 3;
             }
         }
     }

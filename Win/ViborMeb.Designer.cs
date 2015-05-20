@@ -1,6 +1,6 @@
 ﻿namespace Win
 {
-    partial class Form1
+    partial class ViborMeb
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViborMeb));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.мебельBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asdDataSet = new Win.AsdDataSet();
@@ -83,16 +84,17 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Выберите модель мебели";
             // 
-            // Form1
+            // ViborMeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "Form1";
+            this.Name = "ViborMeb";
             this.Text = "Эскиз мебели";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.мебельBindingSource)).EndInit();

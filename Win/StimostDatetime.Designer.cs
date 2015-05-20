@@ -1,6 +1,6 @@
 ﻿namespace Win
 {
-    partial class Form2
+    partial class StimostDatetime
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StimostDatetime));
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -124,14 +125,15 @@
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
-            // Form2
+            // StimostDatetime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(429, 239);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Name = "StimostDatetime";
             this.Text = "Стоимость и дата выполнения";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

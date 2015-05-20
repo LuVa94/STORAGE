@@ -493,6 +493,15 @@ namespace Win
             }
             catch { }
 
+            //для запоминания данных (для создания договора)
+            Program.vibormeb = 3;
+            Program.dlina = Convert.ToInt32(textBox1.Text);
+            Program.shirina = Convert.ToInt32(textBox2.Text);
+            Program.glybina = Convert.ToInt32(textBox3.Text);
+            Program.material1 = comboBox1.Text;
+            //Program.stoimost = 0;
+            //Program.Datetime_vipol;
+
             string str = textBox4.Text;
             bmp7.Save(way + str + @"_vnyt.jpg");
             bmp8.Save(way + str + @"_vnesh.jpg");
@@ -540,7 +549,7 @@ namespace Win
         {
            
             button4.Enabled = true;
-            Form2 f2 = new Form2();
+            StimostDatetime f2 = new StimostDatetime();
             f2.ShowDialog();
         }
     }
