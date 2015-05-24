@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -62,7 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
@@ -147,15 +145,6 @@
             this.radioButton21.TabStop = true;
             this.radioButton21.Text = "Разделитель";
             this.radioButton21.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 484);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(236, 13);
-            this.label10.TabIndex = 70;
-            this.label10.Text = "*Последняя полка используется для ящиков";
             // 
             // label11
             // 
@@ -377,26 +366,14 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton10);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.radioButton9);
             this.panel1.Controls.Add(this.radioButton8);
             this.panel1.Controls.Add(this.radioButton7);
             this.panel1.Location = new System.Drawing.Point(8, 349);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(108, 112);
+            this.panel1.Size = new System.Drawing.Size(108, 96);
             this.panel1.TabIndex = 65;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(9, 91);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(31, 17);
-            this.radioButton10.TabIndex = 21;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "6";
-            this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -412,10 +389,10 @@
             this.radioButton9.AutoSize = true;
             this.radioButton9.Location = new System.Drawing.Point(9, 68);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(35, 17);
+            this.radioButton9.Size = new System.Drawing.Size(31, 17);
             this.radioButton9.TabIndex = 19;
             this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "4*";
+            this.radioButton9.Text = "4";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
             // radioButton8
@@ -423,10 +400,10 @@
             this.radioButton8.AutoSize = true;
             this.radioButton8.Location = new System.Drawing.Point(9, 45);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(35, 17);
+            this.radioButton8.Size = new System.Drawing.Size(31, 17);
             this.radioButton8.TabIndex = 18;
             this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "3*";
+            this.radioButton8.Text = "3";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // radioButton7
@@ -588,7 +565,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button5);
@@ -653,7 +629,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button5;
@@ -677,7 +652,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton8;

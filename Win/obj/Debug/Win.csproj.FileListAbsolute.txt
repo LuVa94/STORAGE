@@ -41,7 +41,6 @@ C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.cs
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Properties.Resources.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Menu.resources
-C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Form1.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.СозЗак.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.СозЗаяв.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.ШК.resources
@@ -51,3 +50,5 @@ C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.К
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.StimostDatetime.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Statys.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Oplata.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.ViborMeb.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.ШП.resources

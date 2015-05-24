@@ -22,6 +22,7 @@ namespace Win
         }
 
         public string way = @"C:\users\user\documents\visual studio 2013\Projects\WinLinq\Эскизы\";
+        public string way_dog = @"C:\users\user\documents\visual studio 2013\Projects\WinLinq\Договор\";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,6 +30,10 @@ namespace Win
             string fio = textBox1.Text;
             string tel = textBox2.Text;
             string mail = textBox3.Text;
+            bool w1 = false;
+            bool w2 = false;
+            bool w3 = false;
+           
 
             try
             {
@@ -43,13 +48,130 @@ namespace Win
             var c = Program.db2.Vivod(0);
             foreach (Клиент kl in c)
             {
-                if ((kl.ФИО!=fio)&&(kl.Контактный_телефон!=tel)&&(kl.Электронная_почта!=mail))
+                w1 = fio.Equals(kl.ФИО);
+                w2 = tel.Equals(kl.Контактный_телефон);
+                w3 = mail.Equals(kl.Электронная_почта);
+                if ((w1!=false)&&(w2!=false)&&(w3!=false))
                 {
                     Program.db2.ADD(fio, tel, mail);
                 }
             }
-            
+            int num = 0;
+            foreach (Клиент kl in c)
+            {
+                w1 = fio.Equals(kl.ФИО);
+                w2 = tel.Equals(kl.Контактный_телефон);
+                w3 = mail.Equals(kl.Электронная_почта);
+                if ((w1 != false) && (w2 != false) && (w3 != false))
+                {
+                    num=kl.клиентID;
+                }
+            }
+            int id_meb = 0;
+            var m = Program.db1.Vivod(0);
+            foreach (Мебель meb in m)
+            {
+                if (meb.Название==Program.vibmeb)
+                {
+                    id_meb = meb.мебельID;
+                }
+            }
+            int id_mat = 0;
+            var mat = Program.db5.Vivod(0);
+            foreach (Материал ma in mat)
+            {
+                if (ma.Название == Program.material1)
+                {
+                    id_mat = ma.материалID;
+                }
+            }
+            var zakaz = Program.db7.Vivod(0);
+            string stat="Vipolnenie";
+            Program.db7.ADD(Program.dlina, Program.shirina, Program.glybina, id_mat, Program.stoimost, Program.Datetime_vipol, stat, id_meb, num);
 
+            MessageBox.Show("Заказ создан");
+
+            int nomer = 0;
+            var doc = new Document();
+            foreach (Заказ za in zakaz)
+            {
+                zakaz.Last();
+                nomer = za.заказID;
+            }
+            PdfWriter.GetInstance(doc, new FileStream(way_dog + nomer.ToString() + @".pdf", FileMode.Create));
+            doc.Open();
+            BaseFont baseFont = BaseFont.CreateFont(@"D:\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Image z1 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внут.jpg");
+            z1.Alignment = Element.ALIGN_CENTER;
+            iTextSharp.text.Image z2 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внеш.jpg");
+            z2.Alignment = Element.ALIGN_CENTER;
+
+
+            iTextSharp.text.Phrase j3 = new Phrase("Тип: " + Program.vibmeb + " Длина: " + Program.dlina + " Ширина: " + Program.shirina + " Глубина: " + Program.glybina + " Материал: " + Program.material1 + " Вставка: " + Program.material2 + " Дата выполнения: " + Program.Datetime_vipol + " Стоимость: " + Program.stoimost,
+           new iTextSharp.text.Font(baseFont, 12,
+           iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph a3 = new Paragraph(j3);
+            a3.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j4 = new Phrase("Доставка: "+Program.vibdos+" Сборка: "+Program.vibsbor,
+          new iTextSharp.text.Font(baseFont, 12,
+          iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph a4 = new Paragraph(j4);
+            a4.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j1 = new Phrase("Заказ №" + nomer,
+          new iTextSharp.text.Font(baseFont, 18,
+          iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.DarkRed)));
+            Paragraph a1 = new Paragraph(j1);
+            a1.Alignment = Element.ALIGN_CENTER;
+            a1.SpacingAfter = 30;
+
+            iTextSharp.text.Phrase j2 = new Phrase("Клиент: "+ fio+" Контактный телефон: "+tel+" Электронная почта: "+mail,
+         new iTextSharp.text.Font(baseFont, 12,
+         iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph a2 = new Paragraph(j2);
+            a2.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j5 = new Phrase("Подпись: ",
+        new iTextSharp.text.Font(baseFont, 14,
+        iTextSharp.text.Font.ITALIC, new BaseColor(Color.Black)));
+            Paragraph a5 = new Paragraph(j5);
+            a5.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j6 = new Phrase("Заказчик: ",
+        new iTextSharp.text.Font(baseFont, 12,
+        iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph a6 = new Paragraph(j6);
+            a6.SpacingAfter = 10;
+
+            iTextSharp.text.Phrase j7 = new Phrase("Исполнитель: ",
+        new iTextSharp.text.Font(baseFont, 12,
+        iTextSharp.text.Font.BOLD, new BaseColor(Color.Black)));
+            Paragraph a7 = new Paragraph(j7);
+            a7.SpacingAfter = 10;
+
+
+            iTextSharp.text.Image k1 = iTextSharp.text.Image.GetInstance(way + openFileDialog1.FileName + @"_vnyt.jpg");
+            k1.Alignment = Element.ALIGN_CENTER;
+            k1.SpacingAfter = 10;
+            iTextSharp.text.Image k2 = iTextSharp.text.Image.GetInstance(way + openFileDialog1.FileName + @"_vnesh.jpg");
+            k2.Alignment = Element.ALIGN_CENTER;
+            k2.SpacingAfter = 10;
+
+            doc.Add(a1);
+            doc.Add(a2);
+            doc.Add(a3);
+            doc.Add(a4);
+            doc.Add(z1);
+            doc.Add(k1);
+            doc.Add(z2);
+            doc.Add(k2);
+            doc.Add(a5);
+            doc.Add(a6);
+            doc.Add(a7);
+            doc.Close();
+
+            MessageBox.Show("Сохранено в " + way_dog);
             //после выбора или создания эскиза показать стоимость
 
             //проверить хватает ли материалов
@@ -63,7 +185,6 @@ namespace Win
             //создание договора (берутся данные с этой формы)
 
             //вывод сообщения готово
-            MessageBox.Show("Заказ создан");
         }
 
         private void СозЗак_Load(object sender, EventArgs e)
@@ -72,7 +193,6 @@ namespace Win
             this.мебельTableAdapter.Fill(this.asdDataSet.Мебель);
 
             button1.Enabled = false;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -113,6 +233,11 @@ namespace Win
                     К k = new К();
                     k.ShowDialog();
                 }
+                if (w2 != false)
+                {
+                    ШП q = new ШП();
+                    q.ShowDialog();
+                }
             }
 
             //выбор уже существующего эскиза
@@ -127,6 +252,11 @@ namespace Win
                     System.Diagnostics.Process.Start( openFileDialog1.FileName);
                     sr.Close();
                 }
+
+                Metods med = new Metods();
+                med.ExtractText(openFileDialog1.FileName);
+               // MessageBox.Show(med.ExtractText(openFileDialog1.FileName));
+                med.Vibor();
                    
             }
         }
@@ -134,6 +264,14 @@ namespace Win
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             button1.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Metods med = new Metods();
+            ////med.ExtractText(openFileDialog1.FileName);
+            //MessageBox.Show(med.ExtractText(openFileDialog1.FileName));
+            //med.Vibor();
         }
     }
 }

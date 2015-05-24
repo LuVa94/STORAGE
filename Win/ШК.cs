@@ -509,20 +509,12 @@ namespace Win
             PdfWriter.GetInstance(doc, new FileStream(way + str + @".pdf", FileMode.Create));
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"D:\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-            iTextSharp.text.Phrase j1 = new Phrase("Внутреннее устройство",
-            new iTextSharp.text.Font(baseFont, 14,
-            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Red)));
-            Paragraph a1 = new Paragraph(j1);
-            a1.Alignment = Element.ALIGN_CENTER;
-            a1.SpacingAfter = 10;
-            iTextSharp.text.Phrase j2 = new Phrase("Внешний вид",
-            new iTextSharp.text.Font(baseFont, 14,
-            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Red)));
-            Paragraph a2 = new Paragraph(j2);
-            a2.Alignment = Element.ALIGN_CENTER;
-            a2.SpacingAfter = 10;
+            iTextSharp.text.Image z1 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внут.jpg");
+            z1.Alignment = Element.ALIGN_CENTER;
+            iTextSharp.text.Image z2 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внеш.jpg");
+            z2.Alignment = Element.ALIGN_CENTER;
 
-            iTextSharp.text.Phrase j3 = new Phrase("Длина: " + textBox1.Text + "   Ширина: " + textBox2.Text + "    Глубина: " + textBox3.Text + "    Материал: " + comboBox1.Text,
+            iTextSharp.text.Phrase j3 = new Phrase("Тип: Shkaf-kype Длина: " + textBox1.Text + " Ширина: " + textBox2.Text + " Глубина: " + textBox3.Text + " Материал: " + comboBox1.Text + " Дата выполнения: " + Program.Datetime_vipol + "  Стоимость: " + Program.stoimost,
            new iTextSharp.text.Font(baseFont, 14,
            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Black)));
             Paragraph a3 = new Paragraph(j3);
@@ -535,9 +527,9 @@ namespace Win
             k2.Alignment = Element.ALIGN_CENTER;
             k2.SpacingAfter = 10;
 
-            doc.Add(a1);
+            doc.Add(z1);
             doc.Add(k1);
-            doc.Add(a2);
+            doc.Add(z2);
             doc.Add(k2);
             doc.Add(a3);
             doc.Close();
@@ -547,7 +539,35 @@ namespace Win
 
         private void button5_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (comboBox1.Text == ""))
+                {
+                    MessageBox.Show("Часть полей не заполнено");
+                    return;
+                }
+            }
+            catch { }
            
+            try
+            {
+                if ((eskiz1 == false) || (eskiz2 == false))
+                {
+                    MessageBox.Show("Ошибка: не нарисован эскиз");
+                    return;
+                }
+            }
+            catch { }
+
+            //для запоминания данных (для создания договора)
+            Program.vibormeb = 3;
+            Program.dlina = Convert.ToInt32(textBox1.Text);
+            Program.shirina = Convert.ToInt32(textBox2.Text);
+            Program.glybina = Convert.ToInt32(textBox3.Text);
+            Program.material1 = comboBox1.Text;
+            //Program.stoimost = 0;
+            //Program.Datetime_vipol;
+
             button4.Enabled = true;
             StimostDatetime f2 = new StimostDatetime();
             f2.ShowDialog();

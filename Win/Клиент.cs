@@ -36,6 +36,13 @@ namespace Win
             set;
         }
 
+        private EntitySet<Заказ> cc = new EntitySet<Заказ>();
+        [Association(Storage = "cc", OtherKey = "заказID")]
+        public EntitySet<Заказ> Заказ
+        {
+            get { return cc; }
+            set { cc.Assign(value); }
+        }
         public override string ToString()
         {
             return клиентID + " | " + ФИО + " | " + Контактный_телефон + " | " + Электронная_почта;

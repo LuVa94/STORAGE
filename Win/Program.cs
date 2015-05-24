@@ -23,6 +23,7 @@ namespace Win
 
         // переменные для конструктора мебели
         public static int vibormeb = 0;
+        public static string vibmeb = "";
         public static int dlina = 0;
         public static int shirina = 0;
         public static int glybina = 0;
@@ -30,42 +31,10 @@ namespace Win
         public static string material2 = "";
         public static int stoimost = 0;
         public static DateTimeOffset Datetime_vipol;
+        public static string vibdos = "No";
+        public static string vibsbor = "No";
 
 
-
-        public static void Raschet()
-        {
-            var k=Program.db3.Vivod(0);
-            string statys = "";
-            int ran = 0;
-            //foreach (Комплектующие kom in k)
-            //{
-                //здесь для каждого вида мебели свой вид и кол-во комплектующих
-                //вычитаем кол-во из склада(из таблицы)
-                //если хватает, то поставить статус
-                if(statys=="xvataet")
-                {
-                   // DateTime thisDay = DateTime.Today;
-                    DateTime a = DateTime.Today.AddDays(10);
-
-                }
-                else
-                {
-                    //проход по списку комплектующих и выделение id для подсчета времени
-                    var z = Program.db6.Vivod(0);
-                    foreach (Закупка zak in z)
-                    {
-                        DateTime d1 = DateTime.Today;
-                        DateTimeOffset d2 = zak.Дата_доставки;
-                        TimeSpan time = d2 - d1;
-                        ran = Convert.ToInt32(time);
-                    }
-                    
-                    int day = ran + 10;
-                    DateTime a = DateTime.Today.AddDays(day);
-                }
-            //}
-        }
 
         [STAThread]
         static void Main()

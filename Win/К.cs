@@ -51,9 +51,11 @@ namespace Win
 
             gr2.FillRectangle(Brushes.Chocolate, 0, 0, 90, 120);
             gr3.FillRectangle(Brushes.Chocolate, 0, 0, 90, 120);
+            gr3.FillRectangle(Brushes.LightGoldenrodYellow, 0, 0, 90, 20);
             gr4.FillRectangle(Brushes.Chocolate, 0, 0, 90, 120);
             gr5.FillRectangle(Brushes.Chocolate, 0, 0, 90, 120);
             gr6.FillRectangle(Brushes.Chocolate, 0, 0, 90, 120);
+            gr6.FillRectangle(Brushes.LightGoldenrodYellow, 45, 0, 45, 120);
             gr7.FillRectangle(Brushes.Chocolate, 0, 0, 90, 120);
 
             gr2.DrawLine(l, 0, 0, 90, 0);
@@ -177,6 +179,7 @@ namespace Win
             button1.Enabled = false;
             // Bitmap bmp8 = new Bitmap(pictureBox8.Width, pictureBox8.Height);
             Graphics gr8 = Graphics.FromImage(bmp8);
+            Graphics gr1 = Graphics.FromImage(bmp1);
             Pen p = new Pen(Brushes.Black, 3);
             Pen l = new Pen(Brushes.Black, 5);
             Pen w = new Pen(Brushes.DimGray, 5);
@@ -210,13 +213,6 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 15, 10, 10);
                     gr8.DrawEllipse(w, 105, 15, 10, 10);
                 }
-                //if (radioButton14.Checked == true)
-                //{
-                //    gr8.FillRectangle(Brushes.Yellow, 0, 0, 200, 300);
-                //    gr8.DrawLine(p, 100, 0, 100, 200);
-                //    gr8.DrawEllipse(w, 85, 15, 10, 10);
-                //    gr8.DrawEllipse(w, 105, 15, 10, 10);
-                //}
             }
 
             if (radioButton2.Checked == true)
@@ -247,15 +243,33 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 35, 10, 10);
                     gr8.DrawEllipse(w, 105, 35, 10, 10);
                 }
-                //if (radioButton14.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 100, 0, 100, 200);
-                //    gr8.DrawLine(p, 0, 30, 200, 30);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 40, 80, 150);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 40, 80, 150);
-                //    gr8.DrawEllipse(w, 85, 35, 10, 10);
-                //    gr8.DrawEllipse(w, 105, 35, 10, 10);
-                //}
+                gr1.FillRectangle(Brushes.Bisque, 0, 0, 200, 300);
+                gr1.FillRectangle(Brushes.LightGoldenrodYellow, 0, 0, 200, 30);
+                gr1.DrawLine(l, 0, 0, 200, 0);
+                gr1.DrawLine(l, 0, 0, 0, 200);
+                gr1.DrawLine(l, 200, 0, 200, 200);
+                gr1.DrawLine(l, 0, 200, 200, 200);
+                gr1.DrawLine(p, 0, 30, 200, 30);
+                gr1.DrawLine(p, 100, 0, 100, 30);
+                if (radioButton7.Checked == true)
+                {
+                    gr1.DrawLine(p, 0, 115, 200, 115);
+                }
+                if (radioButton8.Checked == true)
+                {
+                    gr1.DrawLine(p, 0, 83, 200, 83);
+                    gr1.DrawLine(p, 0, 136, 200, 136);
+                }
+                if (radioButton9.Checked == true)
+                {
+                    gr1.DrawLine(p, 0, 80, 200, 80);
+                    gr1.DrawLine(p, 0, 120, 200, 120);
+                    gr1.DrawLine(p, 0, 160, 200, 160);
+                }
+                if (radioButton21.Checked == true)
+                {
+                    gr1.DrawLine(p, 100, 0, 100, 200);
+                }
             }
             if (radioButton3.Checked == true)
             {
@@ -291,17 +305,6 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 35, 8, 8);
                     gr8.DrawEllipse(w, 105, 35, 8, 8);
                 }
-                //if (radioButton14.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 100, 0, 100, 200);
-                //    gr8.DrawLine(p, 0, 30, 200, 30);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 40, 80, 150);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 40, 80, 150);
-                //    gr8.DrawLine(w, 30, 12, 70, 12);
-                //    gr8.DrawLine(w, 130, 12, 170, 12);
-                //    gr8.DrawEllipse(w, 85, 35, 8, 8);
-                //    gr8.DrawEllipse(w, 105, 35, 8, 8);
-                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 200);
@@ -315,19 +318,35 @@ namespace Win
                     gr8.DrawEllipse(w, 85, 35, 8, 8);
                     gr8.DrawEllipse(w, 105, 35, 8, 8);
                 }
-                //if (radioButton15.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 100, 0, 100, 200);
-                //    gr8.DrawLine(p, 0, 30, 200, 30);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 40, 80, 150);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 40, 80, 150);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 10);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 10);
-                //    gr8.DrawLine(w, 30, 12, 70, 12);
-                //    gr8.DrawLine(w, 130, 12, 170, 12);
-                //    gr8.DrawEllipse(w, 85, 35, 8, 8);
-                //    gr8.DrawEllipse(w, 105, 35, 8, 8);
-                //}
+                gr1.FillRectangle(Brushes.Bisque, 0, 0, 200, 300);
+                gr1.FillRectangle(Brushes.Chocolate, 0, 0, 200, 30);
+                gr1.DrawLine(l, 0, 0, 200, 0);
+                gr1.DrawLine(l, 0, 0, 0, 200);
+                gr1.DrawLine(l, 200, 0, 200, 200);
+                gr1.DrawLine(l, 0, 200, 200, 200);
+                gr1.DrawLine(p, 0, 30, 200, 30);
+                gr1.DrawLine(p, 100, 0, 100, 30);
+                gr1.DrawLine(w, 30, 12, 70, 12);
+                gr1.DrawLine(w, 130, 12, 170, 12);
+                if (radioButton7.Checked == true)
+                {
+                    gr1.DrawLine(p, 0, 115, 200, 115);
+                }
+                if (radioButton8.Checked == true)
+                {
+                    gr1.DrawLine(p, 0, 83, 200, 83);
+                    gr1.DrawLine(p, 0, 136, 200, 136);
+                }
+                if (radioButton9.Checked == true)
+                {
+                    gr1.DrawLine(p, 0, 80, 200, 80);
+                    gr1.DrawLine(p, 0, 120, 200, 120);
+                    gr1.DrawLine(p, 0, 160, 200, 160);
+                }
+                if (radioButton21.Checked == true)
+                {
+                    gr1.DrawLine(p, 100, 0, 100, 200);
+                }
             }
             if (radioButton4.Checked == true)
             {
@@ -351,18 +370,6 @@ namespace Win
                     gr8.DrawLine(w, 30, 75, 170, 75);
                     gr8.DrawLine(w, 30, 140, 170, 140);
                 }
-                //if (radioButton15.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 0, 65, 200, 65);
-                //    gr8.DrawLine(p, 0, 130, 200, 130);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 180, 50);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 70, 180, 55);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 135, 180, 55);
-                //    gr8.DrawLine(w, 30, 10, 170, 10);
-                //    gr8.DrawLine(w, 30, 75, 170, 75);
-                //    gr8.DrawLine(w, 30, 140, 170, 140);
-                //}
-                Graphics gr1 = Graphics.FromImage(bmp1);
                 gr1.FillRectangle(Brushes.Bisque, 0, 0, 200, 300);
                 gr1.DrawLine(l, 0, 0, 200, 0);
                 gr1.DrawLine(l, 0, 0, 0, 200);
@@ -370,6 +377,11 @@ namespace Win
                 gr1.DrawLine(l, 0, 200, 200, 200);
                 gr1.DrawLine(p, 0, 65, 200, 65);
                 gr1.DrawLine(p, 0, 130, 200, 130);
+                gr1.DrawLine(p, 0, 65, 200, 65);
+                gr1.DrawLine(p, 0, 130, 200, 130);
+                gr1.DrawLine(w, 30, 10, 170, 10);
+                gr1.DrawLine(w, 30, 75, 170, 75);
+                gr1.DrawLine(w, 30, 140, 170, 140);
                 pictureBox1.Image = bmp1;
             }
             if (radioButton5.Checked == true)
@@ -398,16 +410,8 @@ namespace Win
                     gr8.FillRectangle(Brushes.NavajoWhite, 10, 10, 80, 180);
                     gr8.DrawEllipse(w, 85, 15, 10, 10);
                 }
-                //if (radioButton14.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 100, 0, 100, 220);
-                //    gr8.DrawLine(p, 100, 65, 200, 65);
-                //    gr8.DrawLine(p, 100, 130, 200, 130);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 180);
-                //    gr8.DrawEllipse(w, 85, 15, 10, 10);
-                //}
-                Graphics gr1 = Graphics.FromImage(bmp1);
                 gr1.FillRectangle(Brushes.Bisque, 0, 0, 200, 300);
+                gr1.FillRectangle(Brushes.LightGoldenrodYellow, 100, 0, 100, 300);
                 gr1.DrawLine(l, 0, 0, 200, 0);
                 gr1.DrawLine(l, 0, 0, 0, 200);
                 gr1.DrawLine(l, 200, 0, 200, 200);
@@ -415,23 +419,22 @@ namespace Win
                 gr1.DrawLine(p, 100, 0, 100, 220);
                 gr1.DrawLine(p, 100, 65, 200, 65);
                 gr1.DrawLine(p, 100, 130, 200, 130);
-                if (q1 == true)
+                if (radioButton7.Checked == true)
                 {
                     gr1.DrawLine(p, 0, 100, 100, 100);
                 }
-                if (q2 == true)
+                if (radioButton8.Checked == true)
                 {
                     gr1.DrawLine(p, 0, 65, 100, 65);
                     gr1.DrawLine(p, 0, 130, 100, 130);
                 }
-                if (q3 == true)
+                if (radioButton9.Checked == true)
                 {
                     gr1.DrawLine(p, 0, 40, 100, 40);
                     gr1.DrawLine(p, 0, 80, 100, 80);
                     gr1.DrawLine(p, 0, 120, 100, 120);
                     gr1.DrawLine(p, 0, 160, 100, 160);
                 }
-                pictureBox1.Image = bmp1;
             }
             if (radioButton6.Checked == true)
             {
@@ -468,17 +471,6 @@ namespace Win
                     gr8.DrawLine(w, 130, 135, 170, 135);
                     gr8.DrawEllipse(w, 85, 15, 10, 10);
                 }
-                //if (radioButton14.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 100, 0, 100, 220);
-                //    gr8.DrawLine(p, 100, 65, 200, 65);
-                //    gr8.DrawLine(p, 100, 130, 200, 130);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 180);
-                //    gr8.DrawLine(w, 130, 5, 170, 5);
-                //    gr8.DrawLine(w, 130, 70, 170, 70);
-                //    gr8.DrawLine(w, 130, 135, 170, 135);
-                //    gr8.DrawEllipse(w, 85, 15, 10, 10);
-                //}
                 if (radioButton16.Checked == true)
                 {
                     gr8.DrawLine(p, 100, 0, 100, 220);
@@ -493,22 +485,8 @@ namespace Win
                     gr8.DrawLine(w, 130, 135, 170, 135);
                     gr8.DrawEllipse(w, 85, 15, 10, 10);
                 }
-                //if (radioButton15.Checked == true)
-                //{
-                //    gr8.DrawLine(p, 100, 0, 100, 220);
-                //    gr8.DrawLine(p, 100, 65, 200, 65);
-                //    gr8.DrawLine(p, 100, 130, 200, 130);
-                //    gr8.FillRectangle(Brushes.Yellow, 10, 10, 80, 180);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 10, 80, 50);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 70, 80, 55);
-                //    gr8.FillRectangle(Brushes.Yellow, 110, 135, 80, 55);
-                //    gr8.DrawLine(w, 130, 5, 170, 5);
-                //    gr8.DrawLine(w, 130, 70, 170, 70);
-                //    gr8.DrawLine(w, 130, 135, 170, 135);
-                //    gr8.DrawEllipse(w, 85, 15, 10, 10);
-                //}
-                Graphics gr1 = Graphics.FromImage(bmp1);
                 gr1.FillRectangle(Brushes.Bisque, 0, 0, 200, 300);
+                gr1.FillRectangle(Brushes.Chocolate, 100, 0, 200, 300);
                 gr1.DrawLine(l, 0, 0, 200, 0);
                 gr1.DrawLine(l, 0, 0, 0, 200);
                 gr1.DrawLine(l, 200, 0, 200, 200);
@@ -516,24 +494,28 @@ namespace Win
                 gr1.DrawLine(p, 100, 0, 100, 220);
                 gr1.DrawLine(p, 100, 65, 200, 65);
                 gr1.DrawLine(p, 100, 130, 200, 130);
-                if (q1 == true)
+                gr1.DrawLine(w, 130, 5, 170, 5);
+                gr1.DrawLine(w, 130, 70, 170, 70);
+                gr1.DrawLine(w, 130, 135, 170, 135);
+                if (radioButton7.Checked == true)
                 {
                     gr1.DrawLine(p, 0, 100, 100, 100);
                 }
-                if (q2 == true)
+                if (radioButton8.Checked == true)
                 {
                     gr1.DrawLine(p, 0, 65, 100, 65);
                     gr1.DrawLine(p, 0, 130, 100, 130);
                 }
-                if (q3 == true)
+                if (radioButton9.Checked == true)
                 {
                     gr1.DrawLine(p, 0, 40, 100, 40);
                     gr1.DrawLine(p, 0, 80, 100, 80);
                     gr1.DrawLine(p, 0, 120, 100, 120);
                     gr1.DrawLine(p, 0, 160, 100, 160);
                 }
-                pictureBox1.Image = bmp1;
             }
+
+            pictureBox1.Image = bmp1;
             pictureBox8.Image = bmp8;
 
         }
@@ -585,20 +567,13 @@ namespace Win
             PdfWriter.GetInstance(doc, new FileStream(way + str + @".pdf", FileMode.Create));
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"D:\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-            iTextSharp.text.Phrase j1 = new Phrase("Внутреннее устройство",
-            new iTextSharp.text.Font(baseFont, 14,
-            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Red)));
-            Paragraph a1 = new Paragraph(j1);
-            a1.Alignment = Element.ALIGN_CENTER;
-            a1.SpacingAfter = 10;
-            iTextSharp.text.Phrase j2 = new Phrase("Внешний вид",
-            new iTextSharp.text.Font(baseFont, 14,
-            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Red)));
-            Paragraph a2 = new Paragraph(j2);
-            a2.Alignment = Element.ALIGN_CENTER;
-            a2.SpacingAfter = 10;
+            iTextSharp.text.Image z1 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внут.jpg");
+            z1.Alignment = Element.ALIGN_CENTER;
+            iTextSharp.text.Image z2 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внеш.jpg");
+            z2.Alignment = Element.ALIGN_CENTER;
 
-            iTextSharp.text.Phrase j3 = new Phrase("Длина: " + textBox1.Text + "   Ширина: " + textBox2.Text + "    Глубина: " + textBox3.Text + "    Материал: " + comboBox1.Text + "     Вставка: " + comboBox2.Text,
+
+            iTextSharp.text.Phrase j3 = new Phrase("Тип: Komod Длина: " + textBox1.Text + " Ширина: " + textBox2.Text + " Глубина: " + textBox3.Text + " Материал: " + comboBox1.Text + " Вставка: " + comboBox2.Text + " Дата выполнения: " + Program.Datetime_vipol + "  Стоимость: " + Program.stoimost,
            new iTextSharp.text.Font(baseFont, 14,
            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Black)));
             Paragraph a3 = new Paragraph(j3);
@@ -611,9 +586,9 @@ namespace Win
             k2.Alignment = Element.ALIGN_CENTER;
             k2.SpacingAfter = 10;
 
-            doc.Add(a1);
+            doc.Add(z1);
             doc.Add(k1);
-            doc.Add(a2);
+            doc.Add(z2);
             doc.Add(k2);
             doc.Add(a3);
             doc.Close();
@@ -623,6 +598,36 @@ namespace Win
 
         private void button5_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (comboBox1.Text == "") || (comboBox2.Text == ""))
+                {
+                    MessageBox.Show("Часть полей не заполнено");
+                    return;
+                }
+            }
+            catch { }
+
+            try
+            {
+                if ((eskiz1 == false) || (eskiz2 == false))
+                {
+                    MessageBox.Show("Ошибка: не нарисован эскиз");
+                    return;
+                }
+            }
+            catch { }
+
+            //для запоминания данных (для создания договора)
+            Program.vibormeb = 4;
+            Program.dlina = Convert.ToInt32(textBox1.Text);
+            Program.shirina = Convert.ToInt32(textBox2.Text);
+            Program.glybina = Convert.ToInt32(textBox3.Text);
+            Program.material1 = comboBox1.Text;
+            Program.material2 = comboBox2.Text;
+            //Program.stoimost = 0;
+            //Program.Datetime_vipol;
+
             button4.Enabled = true;
             button1.Enabled = false;
             button2.Enabled = false;

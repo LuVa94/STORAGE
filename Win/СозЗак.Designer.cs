@@ -54,6 +54,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.мебельTableAdapter = new Win.AsdDataSetTableAdapters.МебельTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.мебельBindingSource)).BeginInit();
@@ -89,12 +91,12 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 344);
+            this.panel1.Size = new System.Drawing.Size(390, 363);
             this.panel1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(245, 301);
+            this.button1.Location = new System.Drawing.Point(247, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 30);
             this.button1.TabIndex = 25;
@@ -104,6 +106,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label6);
@@ -113,7 +117,7 @@
             this.groupBox2.Controls.Add(this.radioButton5);
             this.groupBox2.Location = new System.Drawing.Point(6, 138);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 157);
+            this.groupBox2.Size = new System.Drawing.Size(358, 183);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -132,7 +136,7 @@
             this.comboBox1.DataSource = this.мебельBindingSource;
             this.comboBox1.DisplayMember = "Название";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(158, 33);
+            this.comboBox1.Location = new System.Drawing.Point(180, 41);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(156, 21);
             this.comboBox1.TabIndex = 5;
@@ -150,24 +154,26 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 36);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(22, 49);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 13);
+            this.label6.Size = new System.Drawing.Size(152, 13);
             this.label6.TabIndex = 8;
             this.label6.Text = "Создать в конструкторе";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 77);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(22, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 13);
+            this.label7.Size = new System.Drawing.Size(196, 13);
             this.label7.TabIndex = 9;
             this.label7.Text = "Выбрать уже созданный эскиз \r\n";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(103, 108);
+            this.button2.Location = new System.Drawing.Point(103, 136);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 30);
             this.button2.TabIndex = 30;
@@ -178,7 +184,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(9, 77);
+            this.radioButton6.Location = new System.Drawing.Point(9, 105);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(14, 13);
             this.radioButton6.TabIndex = 31;
@@ -188,7 +194,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(9, 36);
+            this.radioButton5.Location = new System.Drawing.Point(9, 49);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(14, 13);
             this.radioButton5.TabIndex = 19;
@@ -198,7 +204,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(198, 298);
+            this.checkBox3.Location = new System.Drawing.Point(200, 327);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(41, 17);
             this.checkBox3.TabIndex = 6;
@@ -263,7 +269,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 298);
+            this.label12.Location = new System.Drawing.Point(14, 327);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(165, 13);
             this.label12.TabIndex = 27;
@@ -277,13 +283,32 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(261, 116);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(77, 50);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Считать файл";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(243, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Обязательно после создания откройте эскиз ";
+            // 
             // СозЗак
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(415, 367);
+            this.ClientSize = new System.Drawing.Size(415, 387);
             this.Controls.Add(this.panel1);
             this.Name = "СозЗак";
             this.Text = "СозЗак";
@@ -326,5 +351,7 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label8;
     }
 }

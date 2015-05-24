@@ -38,6 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,9 +80,9 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(3, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(81, 17);
+            this.checkBox2.Size = new System.Drawing.Size(63, 17);
             this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "Установка";
+            this.checkBox2.Text = "Сборка";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label13
@@ -113,6 +114,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.panel3);
@@ -125,6 +127,16 @@
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(171, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 44);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Учесть в стоимости";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StimostDatetime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,6 +147,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "StimostDatetime";
             this.Text = "Стоимость и дата выполнения";
+            this.Load += new System.EventHandler(this.StimostDatetime_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -156,5 +169,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

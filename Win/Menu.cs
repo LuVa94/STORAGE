@@ -787,6 +787,8 @@ namespace Win
         private void Menu_Load(object sender, EventArgs e)
         {
             button7.Enabled = false;
+            Metods med = new Metods();
+            med.Dvizhenie();
         }
     }
 }
