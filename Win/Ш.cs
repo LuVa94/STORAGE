@@ -630,6 +630,11 @@ namespace Win
                     MessageBox.Show("Часть полей не заполнено");
                     return;
                 }
+                if ((Convert.ToInt32(textBox1.Text) < 200) || (Convert.ToInt32(textBox2.Text) < 200) || (Convert.ToInt32(textBox3.Text) < 200))
+                {
+                    MessageBox.Show("Введенные размеры малы");
+                    return;
+                }
             }
             catch { }
             try
@@ -676,7 +681,7 @@ namespace Win
             z2.Alignment = Element.ALIGN_CENTER;
 
 
-            iTextSharp.text.Phrase j3 = new Phrase("Тип: Shkaf Длина: " + textBox1.Text + " Ширина: " + textBox2.Text + " Глубина: " + textBox3.Text + " Материал: " + comboBox1.Text + " Вставка: " + comboBox2.Text + " Дата выполнения: " + Program.Datetime_vipol + "  Стоимость: " + Program.stoimost,
+            iTextSharp.text.Phrase j3 = new Phrase("Тип: Shkaf Длина: " + textBox1.Text + " Ширина: " + textBox2.Text + " Глубина: " + textBox3.Text + " Материал: " + comboBox1.Text + " Вставка: " + comboBox2.Text + " Дата выполнения: " + Program.Datetime_vipol + "  Стоимость: " + Program.stoimost + " Доставка: " + Program.vibdos + " Сборка: " + Program.vibsbor,
            new iTextSharp.text.Font(baseFont, 14,
            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Black)));
             Paragraph a3 = new Paragraph(j3);
@@ -706,6 +711,11 @@ namespace Win
                 if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (comboBox1.Text == "") || (comboBox2.Text == ""))
                 {
                     MessageBox.Show("Часть полей не заполнено");
+                    return;
+                }
+                if ((Convert.ToInt32(textBox1.Text) < 200) || (Convert.ToInt32(textBox2.Text) < 200) || (Convert.ToInt32(textBox3.Text) < 200))
+                {
+                    MessageBox.Show("Введенные размеры малы");
                     return;
                 }
             }

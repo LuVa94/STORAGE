@@ -228,29 +228,56 @@ namespace Win
                 {
                     str2 = list[11];
                     Program.material2 = str2;
-                    str = list[14];
-                    Program.Datetime_vipol = Convert.ToDateTime(str);
-                    if (Program.vibmeb != "Shkaf_penal")
+                    if (Program.vibmeb == "Tymbochka")
                     {
-                        Program.stoimost = Convert.ToInt32(list[18]);
+                        Program.Datetime_vipol = Convert.ToDateTime(list[12]);
+                        Program.stoimost = Convert.ToInt32(list[16]);
+                        Program.vibdos = list[18];
+                        Program.vibdos = list[20];
                     }
                     else
                     {
-                        Program.stoimost = Convert.ToInt32(list[17]);
+                        str = list[14];
+                        Program.Datetime_vipol = Convert.ToDateTime(str);
+                        if (Program.vibmeb != "Shkaf_penal")
+                        {
+                            if (Program.vibmeb == "Shkaf")
+                            {
+                                Program.stoimost = Convert.ToInt32(list[17]);
+                                Program.vibdos = list[19];
+                                Program.vibdos = list[21];
+                            }
+                            else
+                            {
+                                Program.stoimost = Convert.ToInt32(list[18]);
+                                Program.vibdos = list[20];
+                                Program.vibsbor = list[22];
+                            }
+                        }
+                        else
+                        {
+                            Program.stoimost = Convert.ToInt32(list[17]);
+                            Program.vibdos = list[19];
+                            Program.vibdos = list[21];
+                        }
                     }
                 }
                 else
                 {
                     str3 = list[13];
                     Program.Datetime_vipol = Convert.ToDateTime(str3);
-                    Program.stoimost = Convert.ToInt32(list[17]);
+                    Program.stoimost = Convert.ToInt32(list[16]);
+                    Program.vibdos = list[18];
+                    Program.vibdos = list[20];
                 }
+                
             }
             //MessageBox.Show(Program.vibmeb+" "+Program.dlina.ToString());
             //MessageBox.Show(Program.shirina.ToString()+" "+ Program.glybina.ToString());
             //MessageBox.Show(Program.material1+" "+ Program.material2);
             //MessageBox.Show(Program.Datetime_vipol.ToString()+" "+ Program.stoimost.ToString());
         }
+
 
     }
 }

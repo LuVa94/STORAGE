@@ -33,10 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.мебельBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,9 +58,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.мебельTableAdapter = new Win.AsdDataSetTableAdapters.МебельTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.мебельBindingSource)).BeginInit();
@@ -100,6 +99,36 @@
             this.panel1.Size = new System.Drawing.Size(512, 363);
             this.panel1.TabIndex = 2;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(351, 97);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(119, 23);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "Заполнить поля";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.55F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(336, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(173, 45);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Если вы пользовались \r\nуслугами нашей компании,\r\nнайдите ваше ФИО в списке";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(351, 61);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 23);
+            this.button4.TabIndex = 33;
+            this.button4.Text = "Найти";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(333, 330);
@@ -113,7 +142,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label6);
@@ -136,16 +164,6 @@
             this.label8.Size = new System.Drawing.Size(243, 13);
             this.label8.TabIndex = 28;
             this.label8.Text = "Обязательно после создания откройте эскиз ";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(387, 127);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 50);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Считать файл";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -311,36 +329,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(351, 61);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 23);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Найти";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.55F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(336, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(173, 45);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Если вы пользовались \r\nуслугами нашей компании,\r\nнайдите ваше ФИО в списке";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(351, 97);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 23);
-            this.button5.TabIndex = 34;
-            this.button5.Text = "Заполнить поля";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // СозЗак
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,7 +378,6 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button4;

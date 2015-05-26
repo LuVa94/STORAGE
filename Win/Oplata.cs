@@ -40,13 +40,12 @@ namespace Win
                     int s1 = a.Длина;
                     int s2 = a.Ширина;
                     int s3 = a.Глубина;
-                    int  s4 = a.материалID;
                     int s5 = a.Стоимость;
                     DateTimeOffset s6 = a.Дата_выполнения;
                     string s7= "oplacheno";
                     int s9 = a.клиентID;
                     int s8 = a.мебельID;
-                    Program.db7.Edit(num, s1,s2,s3,s4,s5,s6,s7,s8,s9);
+                    Program.db7.Edit(num, s1,s2,s3,s5,s6,s7,s8,s9);
                     MessageBox.Show("Заказ оплачен");
                 }
 

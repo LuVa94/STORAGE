@@ -93,11 +93,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AsdDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AsdDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AsdDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AsdDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs" />
     <Compile Include="Klient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Klient.Designer.cs">
       <DependentUpon>Klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail.Designer.cs">
+      <DependentUpon>Mail.cs</DependentUpon>
     </Compile>
     <Compile Include="Metods.cs" />
     <Compile Include="ViborMeb.cs">
@@ -157,6 +179,12 @@
       <DependentUpon>СозЗаяв.cs</DependentUpon>
     </Compile>
     <Compile Include="Материал.cs" />
+    <Compile Include="Т.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Т.Designer.cs">
+      <DependentUpon>Т.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ш.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +205,9 @@
     </Compile>
     <EmbeddedResource Include="Klient.resx">
       <DependentUpon>Klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail.resx">
+      <DependentUpon>Mail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViborMeb.resx">
       <DependentUpon>ViborMeb.cs</DependentUpon>
@@ -210,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="СозЗаяв.resx">
       <DependentUpon>СозЗаяв.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Т.resx">
+      <DependentUpon>Т.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ш.resx">
       <DependentUpon>Ш.cs</DependentUpon>
@@ -285,6 +319,39 @@
     </None>
     <None Include="AsdDataSet5.xss">
       <DependentUpon>AsdDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet6.xsc">
+      <DependentUpon>AsdDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet6.xss">
+      <DependentUpon>AsdDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet7.xsc">
+      <DependentUpon>AsdDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet7.xss">
+      <DependentUpon>AsdDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet8.xsc">
+      <DependentUpon>AsdDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet8.xss">
+      <DependentUpon>AsdDataSet8.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -31,20 +31,22 @@ namespace Win
         private void button1_Click(object sender, EventArgs e)
         {
             int sum = Program.stoimost;
-            if (checkBox1.Checked = true)
+            if (checkBox1.Checked == true)
             {
                 sum += 500;
                 Program.stoimost = sum;
                 textBox5.Text = Program.stoimost.ToString();
                 Program.vibdos = "yes";
             }
-            if (checkBox2.Checked = true)
+            if (checkBox2.Checked == true)
             {
                 sum =sum+ Program.stoimost/10;
                 Program.stoimost = sum;
                 textBox5.Text = Program.stoimost.ToString();
                 Program.vibsbor = "yes";
             }
+            //MessageBox.Show(Program.vibdos);
+            //MessageBox.Show(Program.vibsbor);
         }
     }
 }

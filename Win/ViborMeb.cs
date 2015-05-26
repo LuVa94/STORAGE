@@ -50,25 +50,26 @@ namespace Win
             {
                 ШК sh = new ШК();
                 sh.ShowDialog();
-                Program.vibormeb = 1;
             }
             if (w4 != false)
             {
                 Ш s = new Ш();
                 s.ShowDialog();
-                Program.vibormeb = 4;
             }
             if (w5 != false)
             {
                 К k = new К();
                 k.ShowDialog();
-                Program.vibormeb = 3;
             }
             if (w2 != false)
             {
                 ШП a = new ШП();
                 a.ShowDialog();
-                Program.vibormeb = 2;
+            }
+            if (w3 != false)
+            {
+                Т t = new Т();
+                t.ShowDialog();
             }
         }
     }
