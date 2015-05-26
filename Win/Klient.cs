@@ -54,10 +54,10 @@ namespace Win
                 Program.telef = list[2];
                 Program.email = list[3];
             }
-            MessageBox.Show(Program.id_klient.ToString());
-            MessageBox.Show(Program.fio);
-            MessageBox.Show(Program.telef);
-            MessageBox.Show(Program.email);
+            //MessageBox.Show(Program.id_klient.ToString());
+            //MessageBox.Show(Program.fio);
+            //MessageBox.Show(Program.telef);
+            //MessageBox.Show(Program.email);
             Close();
         }
     }
