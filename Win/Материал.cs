@@ -24,12 +24,12 @@ namespace Win
             set;
         }
 
-        private EntitySet<Заказ> aa = new EntitySet<Заказ>();
-        [Association(Storage = "aa", OtherKey = "заказID")]
+        private EntitySet<Заказ> bb = new EntitySet<Заказ>();
+        [Association(Storage = "bb", OtherKey = "заказID")]
         public EntitySet<Заказ> Заказ
         {
-            get { return aa; }
-            set { aa.Assign(value); }
+            get { return bb; }
+            set { bb.Assign(value); }
         }
 
         public override string ToString()

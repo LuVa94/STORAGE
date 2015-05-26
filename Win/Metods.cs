@@ -223,16 +223,21 @@ namespace Win
                 Program.dlina = Convert.ToInt32(list[3]);
                 Program.shirina = Convert.ToInt32(list[5]);
                 Program.glybina = Convert.ToInt32(list[7]);
-                str1 = list[9];
-                Program.material1 = str1;
+                Program.material1 = list[9];
                 if (Program.vibmeb != "Shkaf-kype")
                 {
                     str2 = list[11];
                     Program.material2 = str2;
-                   // str = list[14] + " " + list[15] + " " + list[16];
                     str = list[14];
                     Program.Datetime_vipol = Convert.ToDateTime(str);
-                    Program.stoimost = Convert.ToInt32(list[18]);
+                    if (Program.vibmeb != "Shkaf_penal")
+                    {
+                        Program.stoimost = Convert.ToInt32(list[18]);
+                    }
+                    else
+                    {
+                        Program.stoimost = Convert.ToInt32(list[17]);
+                    }
                 }
                 else
                 {

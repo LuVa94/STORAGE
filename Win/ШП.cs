@@ -612,7 +612,7 @@ namespace Win
             iTextSharp.text.Image z2 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внеш.jpg");
             z2.Alignment = Element.ALIGN_CENTER;
 
-            iTextSharp.text.Phrase j3 = new Phrase("Тип: Shkaf penal Длина: " + textBox1.Text + " Ширина: " + textBox2.Text + " Глубина: " + textBox3.Text + " Материал: " + comboBox1.Text + " Вставка: " + comboBox2.Text + " Дата выполнения: " + Program.Datetime_vipol + "  Стоимость: " + Program.stoimost,
+            iTextSharp.text.Phrase j3 = new Phrase("Тип: Shkaf_penal Длина: " + textBox1.Text + " Ширина: " + textBox2.Text + " Глубина: " + textBox3.Text + " Материал: " + comboBox1.Text + " Вставка: " + comboBox2.Text + " Дата выполнения: " + Program.Datetime_vipol + "  Стоимость: " + Program.stoimost,
            new iTextSharp.text.Font(baseFont, 14,
            iTextSharp.text.Font.BOLDITALIC, new BaseColor(Color.Black)));
             Paragraph a3 = new Paragraph(j3);

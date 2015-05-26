@@ -36,7 +36,7 @@ namespace Win
              bool w5 = true;
              var m = Program.db1.Vivod(0);
              string name1="Shkaf-kype";
-             string name2 = "Shkaf penal";
+             string name2 = "Shkaf_penal";
              string name3 = "Tymbochka";
              string name4 = "Shkaf";
              string name5 = "Komod";

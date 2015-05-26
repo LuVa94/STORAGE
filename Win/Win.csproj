@@ -93,6 +93,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AsdDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klient.Designer.cs">
+      <DependentUpon>Klient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Metods.cs" />
     <Compile Include="ViborMeb.cs">
       <SubType>Form</SubType>
@@ -169,6 +175,9 @@
     <Compile Include="ШП.Designer.cs">
       <DependentUpon>ШП.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Klient.resx">
+      <DependentUpon>Klient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViborMeb.resx">
       <DependentUpon>ViborMeb.cs</DependentUpon>
     </EmbeddedResource>

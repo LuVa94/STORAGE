@@ -85,27 +85,27 @@ namespace Win
                 if (value != null) мебельID = value.мебельID;
             }
         }
-        private EntityRef<Материал> m;
-        [Association(Storage = "m", ThisKey = "заказID", OtherKey = "материалID",
+        private EntityRef<Материал> xxx;
+        [Association(Storage = "xxx", ThisKey = "заказID", OtherKey = "материалID",
         IsForeignKey = true)]
         public Материал Материал
         {
-            get { return m.Entity; }
+            get { return xxx.Entity; }
             set
             {
-                m.Entity = value;
+                xxx.Entity = value;
                 if (value != null) материалID = value.материалID;
             }
         }
-        private EntityRef<Клиент> kk;
-        [Association(Storage = "kk", ThisKey = "заказID", OtherKey = "клиентID",
+        private EntityRef<Клиент> pop;
+        [Association(Storage = "pop", ThisKey = "заказID", OtherKey = "клиентID",
         IsForeignKey = true)]
         public Клиент Клиент
         {
-            get { return kk.Entity; }
+            get { return pop.Entity; }
             set
             {
-                kk.Entity = value;
+                pop.Entity = value;
                 if (value != null) клиентID = value.клиентID;
             }
         }

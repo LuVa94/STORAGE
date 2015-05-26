@@ -52,3 +52,4 @@ C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.St
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Oplata.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.ViborMeb.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.ШП.resources
+C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\Win\obj\Debug\Win.Klient.resources

@@ -34,7 +34,10 @@ namespace Win
         public static string vibdos = "No";
         public static string vibsbor = "No";
 
-
+        public static string fio= "";
+        public static string telef = "";
+        public static string email = "";
+        public static int id_klient = 0;
 
         [STAThread]
         static void Main()
