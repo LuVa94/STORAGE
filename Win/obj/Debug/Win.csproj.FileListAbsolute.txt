@@ -162,3 +162,33 @@ C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\STORAGE\Win\obj\Debu
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\STORAGE\Win\obj\Debug\Win.ШК.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\STORAGE\Win\obj\Debug\Win.ШП.resources
 C:\Users\user\Documents\Visual Studio 2013\Projects\WinLinq\STORAGE\Win\obj\Debug\Win.csproj.GenerateResource.Cache
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\Win.exe.config
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.exe
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.pdb
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\Asd.mdf
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\Asd_log.ldf
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\Win.exe
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\Win.pdb
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\GemBox.Document.dll
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\GemBox.Spreadsheet.dll
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\GemBox.Document.xml
+C:\Users\Татьяна\Desktop\STORAGE\Win\bin\Debug\GemBox.Spreadsheet.xml
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.csprojResolveAssemblyReference.cache
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.TableForm.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Klient.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Mail.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.GraphForm.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.ViborMeb.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.StimostDatetime.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Menu.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Statys.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Oplata.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Properties.Resources.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.К.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.СозЗак.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.СозЗаяв.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Т.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.Ш.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.ШК.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.ШП.resources
+C:\Users\Татьяна\Desktop\STORAGE\Win\obj\Debug\Win.csproj.GenerateResource.Cache
