@@ -93,7 +93,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Klient";
-            this.Text = "Klient";
+            this.Text = "Клиент";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -24,6 +24,7 @@ namespace Win
         public Bitmap bmp1 = new Bitmap(300, 300);
         public bool eskiz1 = false;
         public bool eskiz2 = false;
+        public string str = "";
 
         private void Тумбочка_Load(object sender, EventArgs e)
         {
@@ -197,10 +198,21 @@ namespace Win
             Program.glybina = Convert.ToInt32(textBox3.Text);
             Program.material1 = comboBox1.Text;
 
-            string str = textBox4.Text;
+            str = textBox4.Text;
             bmp1.Save(way + str + @"_vnesh.jpg");
+            var dialog = new SaveFileDialog();
+            dialog.Filter = "PDF (*.pdf)|*.pdf";
+            if (dialog.ShowDialog() != DialogResult.Cancel)
+            {
+                Ris(dialog.FileName);
+            }
+            MessageBox.Show("Сохранено");
+
+        }
+             private void Ris(string fileName)
+        {
             var doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream(way + str + @".pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream(fileName.ToString() + @".pdf", FileMode.Create));
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"D:\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
            
@@ -223,10 +235,8 @@ namespace Win
             doc.Add(k2);
             doc.Add(a3);
             doc.Close();
+             }
 
-            MessageBox.Show("Сохранено в " + way);
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {

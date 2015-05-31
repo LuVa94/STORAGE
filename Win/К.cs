@@ -26,6 +26,7 @@ namespace Win
         public bool eskiz1 = false;
         public bool eskiz2 = false;
         public bool q1, q2, q3 = false;
+        public string str = "";
 
         private void Form4_Load(object sender, EventArgs e)
         {
@@ -540,7 +541,7 @@ namespace Win
             {
                 if (textBox4.Text == "")
                 {
-                    MessageBox.Show("Ошибка: не введено название");
+                    MessageBox.Show("Ошибка: не введено название для картинок");
                     return;
                 }
             }
@@ -554,14 +555,25 @@ namespace Win
             Program.glybina = Convert.ToInt32(textBox3.Text);
             Program.material1 = comboBox1.Text;
             Program.material2 = comboBox2.Text;
-            //Program.stoimost = 0;
-            //Program.Datetime_vipol;
 
-            string str = textBox4.Text;
+           str = textBox4.Text;
             bmp1.Save(way + str + @"_vnyt.jpg");
-            bmp8.Save(way + str + @"_vnesh.jpg");
+                bmp8.Save(way + str + @"_vnesh.jpg");
+             var dialog = new SaveFileDialog();
+            dialog.Filter = "PDF (*.pdf)|*.pdf";
+            if (dialog.ShowDialog() != DialogResult.Cancel)
+            {
+                Ris(dialog.FileName);
+            }
+
+            MessageBox.Show("Сохранено");
+        }
+
+        private void Ris(string fileName)
+        {
             var doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream(way + str + @".pdf", FileMode.Create));
+            //PdfWriter.GetInstance(doc, new FileStream(way + str + @".pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream(fileName.ToString() + @".pdf", FileMode.Create));
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"D:\ARIAL.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
             iTextSharp.text.Image z1 = iTextSharp.text.Image.GetInstance(way + @"Заголовок_внут.jpg");
@@ -590,8 +602,6 @@ namespace Win
             doc.Add(k2);
             doc.Add(a3);
             doc.Close();
-
-            MessageBox.Show("Сохранено в " + way);
         }
 
         private void button5_Click(object sender, EventArgs e)

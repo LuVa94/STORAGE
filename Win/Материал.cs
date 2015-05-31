@@ -18,7 +18,13 @@ namespace Win
             set;
         }
         [Column]
-        public string Название
+        public string  Название
+        {
+            get;
+            set;
+        }
+        [Column]
+        public int Стоимость_за_1_кв_м
         {
             get;
             set;
@@ -34,7 +40,7 @@ namespace Win
 
         public override string ToString()
         {
-            return материалID + " | " + Название;
+            return материалID + " | " + Название + " | " + Стоимость_за_1_кв_м;
         }
     }
     public class DB_sost : DataContext
@@ -54,18 +60,20 @@ namespace Win
                 this.CreateDatabase();
             }
         }
-        public void ADD(string Название)
+        public void ADD(string Название, int Стоимость_за_1_кв_м)
         {
             Материал sost = new Материал();
             sost.Название = Название;
+            sost.Стоимость_за_1_кв_м = Стоимость_за_1_кв_м;
             this.Материал.InsertOnSubmit(sost);
             this.SubmitChanges();
         }
 
-        public void Edit(int материалID, string Название)
+        public void Edit(int материалID, string Название, int Стоимость_за_1_кв_м)
         {
             Материал sost = this.Материал.Where(c => c.материалID == материалID).FirstOrDefault();
             sost.Название = Название;
+            sost.Стоимость_за_1_кв_м = Стоимость_за_1_кв_м;
             this.SubmitChanges();
         }
 

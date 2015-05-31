@@ -32,7 +32,6 @@ namespace Win
             {
                 if (kom.Количество < 20)
                 {
-                    // listBox1.Items.Add(kom);
                     num = kom.комплектующиеID;
                     foreach (Поставщик post in p)
                     {
@@ -64,6 +63,7 @@ namespace Win
         public void Dvizhenie()
         {
             int num = 0;
+            int kol = 0;
             var w = Program.db6.Vivod(0);
             var k = Program.db3.Vivod(0);
             foreach (Комплектующие kom in k)
@@ -71,12 +71,13 @@ namespace Win
                 if (kom.Количество < 20)
                 {
                     num = kom.комплектующиеID;
+                    kol = kom.Количество;
                    
                             foreach (Закупка zak in w)
                             {
-                                if ((zak.комплектующиеID == num) && (DateTimeOffset.Now == zak.Дата_доставки))
+                                if ((zak.комплектующиеID == num) && (DateTimeOffset.Now > zak.Дата_доставки))
                                 {
-                                    kom.Количество += zak.Количество;
+                                    kom.Количество =kol+ zak.Количество;
                                 }
                             }
 
@@ -168,7 +169,6 @@ namespace Win
             //если хватает, то поставить статус
             if (statys == "xvataet")
             {
-                // DateTime thisDay = DateTime.Today;
                  a = DateTime.Today.AddDays(10);
 
             }
@@ -272,10 +272,6 @@ namespace Win
                 }
                 
             }
-            //MessageBox.Show(Program.vibmeb+" "+Program.dlina.ToString());
-            //MessageBox.Show(Program.shirina.ToString()+" "+ Program.glybina.ToString());
-            //MessageBox.Show(Program.material1+" "+ Program.material2);
-            //MessageBox.Show(Program.Datetime_vipol.ToString()+" "+ Program.stoimost.ToString());
         }
 
 

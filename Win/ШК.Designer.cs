@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ШК));
-            this.label11 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -82,7 +81,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.материалTableAdapter = new Win.AsdDataSet5TableAdapters.МатериалTableAdapter();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asdDataSet5)).BeginInit();
             this.panel4.SuspendLayout();
@@ -99,40 +97,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1120, 446);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(244, 17);
-            this.label11.TabIndex = 68;
-            this.label11.Text = "Введите название файла с эскизом";
-            // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1124, 465);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(843, 378);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 22);
+            this.textBox4.Size = new System.Drawing.Size(173, 20);
             this.textBox4.TabIndex = 67;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 374);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(13, 304);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1708, 17);
+            this.label10.Size = new System.Drawing.Size(1027, 13);
             this.label10.TabIndex = 66;
             this.label10.Text = resources.GetString("label10.Text");
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1124, 559);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(843, 454);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(231, 44);
+            this.button5.Size = new System.Drawing.Size(173, 36);
             this.button5.TabIndex = 65;
             this.button5.Text = "Стоимость и дата выполнения";
             this.button5.UseVisualStyleBackColor = true;
@@ -143,10 +128,9 @@
             this.comboBox1.DataSource = this.материалBindingSource;
             this.comboBox1.DisplayMember = "Название";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(905, 566);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(679, 454);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 64;
             // 
             // материалBindingSource
@@ -161,74 +145,66 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(905, 526);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(679, 427);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 63;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(905, 494);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(679, 401);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 62;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(905, 460);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(679, 374);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 61;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(829, 566);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(622, 460);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 17);
+            this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 60;
             this.label9.Text = "Материал";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(844, 534);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(633, 434);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 17);
+            this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 59;
             this.label8.Text = "Глубина";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(844, 505);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(633, 410);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 17);
+            this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 58;
             this.label7.Text = "Ширина";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(844, 469);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(633, 381);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 57;
             this.label6.Text = "Длина";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1124, 507);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(843, 412);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(231, 44);
+            this.button4.Size = new System.Drawing.Size(173, 36);
             this.button4.TabIndex = 56;
             this.button4.Text = "Сохранить эскиз";
             this.button4.UseVisualStyleBackColor = true;
@@ -236,10 +212,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(616, 562);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(462, 457);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 58);
+            this.button1.Size = new System.Drawing.Size(65, 47);
             this.button1.TabIndex = 55;
             this.button1.Text = "Выбрать ";
             this.button1.UseVisualStyleBackColor = true;
@@ -251,19 +226,17 @@
             this.panel4.Controls.Add(this.radioButton13);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.radioButton14);
-            this.panel4.Location = new System.Drawing.Point(459, 417);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(344, 339);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(280, 123);
+            this.panel4.Size = new System.Drawing.Size(210, 100);
             this.panel4.TabIndex = 54;
             // 
             // radioButton15
             // 
             this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(8, 90);
-            this.radioButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton15.Location = new System.Drawing.Point(6, 73);
             this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(110, 21);
+            this.radioButton15.Size = new System.Drawing.Size(86, 17);
             this.radioButton15.TabIndex = 6;
             this.radioButton15.TabStop = true;
             this.radioButton15.Text = "Глухие (все)";
@@ -272,10 +245,9 @@
             // radioButton13
             // 
             this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(8, 62);
-            this.radioButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton13.Location = new System.Drawing.Point(6, 50);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(255, 21);
+            this.radioButton13.Size = new System.Drawing.Size(196, 17);
             this.radioButton13.TabIndex = 5;
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "Зеркало(середина для 3х дверей)";
@@ -284,20 +256,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 14);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 17);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Оформление";
             // 
             // radioButton14
             // 
             this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(8, 33);
-            this.radioButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton14.Location = new System.Drawing.Point(6, 27);
             this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(117, 21);
+            this.radioButton14.Size = new System.Drawing.Size(92, 17);
             this.radioButton14.TabIndex = 4;
             this.radioButton14.TabStop = true;
             this.radioButton14.Text = "Зеркало(все)";
@@ -308,19 +278,17 @@
             this.panel3.Controls.Add(this.radioButton11);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.radioButton12);
-            this.panel3.Location = new System.Drawing.Point(459, 548);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(344, 445);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(113, 91);
+            this.panel3.Size = new System.Drawing.Size(85, 74);
             this.panel3.TabIndex = 53;
             // 
             // radioButton11
             // 
             this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(8, 62);
-            this.radioButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton11.Location = new System.Drawing.Point(6, 50);
             this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(37, 21);
+            this.radioButton11.Size = new System.Drawing.Size(31, 17);
             this.radioButton11.TabIndex = 5;
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "3";
@@ -329,20 +297,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 14);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 17);
+            this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Кол-во дверей";
             // 
             // radioButton12
             // 
             this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(8, 33);
-            this.radioButton12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton12.Location = new System.Drawing.Point(6, 27);
             this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(37, 21);
+            this.radioButton12.Size = new System.Drawing.Size(31, 17);
             this.radioButton12.TabIndex = 4;
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "2";
@@ -352,19 +318,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(161, 393);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(121, 319);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 40;
             this.label3.Text = "Внешний вид";
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(27, 417);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(20, 339);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(400, 246);
+            this.pictureBox8.Size = new System.Drawing.Size(300, 200);
             this.pictureBox8.TabIndex = 52;
             this.pictureBox8.TabStop = false;
             // 
@@ -373,19 +337,17 @@
             this.panel2.Controls.Add(this.radioButton10);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.radioButton9);
-            this.panel2.Location = new System.Drawing.Point(888, 258);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(666, 210);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(175, 95);
+            this.panel2.Size = new System.Drawing.Size(131, 77);
             this.panel2.TabIndex = 51;
             // 
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(8, 62);
-            this.radioButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton10.Location = new System.Drawing.Point(6, 50);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(37, 21);
+            this.radioButton10.Size = new System.Drawing.Size(31, 17);
             this.radioButton10.TabIndex = 5;
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "2";
@@ -394,20 +356,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 17);
+            this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Полки слева/справа";
             // 
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(8, 33);
-            this.radioButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton9.Location = new System.Drawing.Point(6, 27);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(37, 21);
+            this.radioButton9.Size = new System.Drawing.Size(31, 17);
             this.radioButton9.TabIndex = 4;
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "1";
@@ -418,19 +378,17 @@
             this.panel1.Controls.Add(this.radioButton8);
             this.panel1.Controls.Add(this.radioButton7);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1195, 258);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(896, 210);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(177, 95);
+            this.panel1.Size = new System.Drawing.Size(133, 77);
             this.panel1.TabIndex = 50;
             // 
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(8, 59);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton8.Location = new System.Drawing.Point(6, 48);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(37, 21);
+            this.radioButton8.Size = new System.Drawing.Size(31, 17);
             this.radioButton8.TabIndex = 3;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "2";
@@ -439,10 +397,9 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(8, 36);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton7.Location = new System.Drawing.Point(6, 29);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(37, 21);
+            this.radioButton7.Size = new System.Drawing.Size(31, 17);
             this.radioButton7.TabIndex = 2;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "1";
@@ -451,19 +408,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 17);
+            this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Полки сверху и снизу";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1071, 272);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(803, 221);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 55);
+            this.button3.Size = new System.Drawing.Size(87, 45);
             this.button3.TabIndex = 49;
             this.button3.Text = "Добавить";
             this.button3.UseVisualStyleBackColor = true;
@@ -471,20 +426,18 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(929, 5);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(697, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(400, 246);
+            this.pictureBox7.Size = new System.Drawing.Size(300, 200);
             this.pictureBox7.TabIndex = 48;
             this.pictureBox7.TabStop = false;
             // 
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(589, 177);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton6.Location = new System.Drawing.Point(442, 144);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(86, 21);
+            this.radioButton6.Size = new System.Drawing.Size(70, 17);
             this.radioButton6.TabIndex = 47;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Blackwall";
@@ -493,10 +446,9 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(315, 177);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton5.Location = new System.Drawing.Point(236, 144);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(92, 21);
+            this.radioButton5.Size = new System.Drawing.Size(73, 17);
             this.radioButton5.TabIndex = 46;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Цунами 2";
@@ -505,10 +457,9 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(40, 177);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton4.Location = new System.Drawing.Point(30, 144);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(92, 21);
+            this.radioButton4.Size = new System.Drawing.Size(73, 17);
             this.radioButton4.TabIndex = 45;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Цунами 1";
@@ -517,10 +468,9 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(589, 2);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Location = new System.Drawing.Point(442, 2);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(90, 21);
+            this.radioButton3.Size = new System.Drawing.Size(71, 17);
             this.radioButton3.TabIndex = 44;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "SunShine";
@@ -529,10 +479,9 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(315, 2);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Location = new System.Drawing.Point(236, 2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 21);
+            this.radioButton2.Size = new System.Drawing.Size(71, 17);
             this.radioButton2.TabIndex = 43;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Аврора 2";
@@ -541,10 +490,9 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(40, 2);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Location = new System.Drawing.Point(30, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 21);
+            this.radioButton1.Size = new System.Drawing.Size(71, 17);
             this.radioButton1.TabIndex = 42;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Аврора 1";
@@ -552,64 +500,57 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(589, 206);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(442, 167);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(267, 123);
+            this.pictureBox6.Size = new System.Drawing.Size(200, 100);
             this.pictureBox6.TabIndex = 41;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(315, 206);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(236, 167);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(267, 123);
+            this.pictureBox5.Size = new System.Drawing.Size(200, 100);
             this.pictureBox5.TabIndex = 39;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(40, 206);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(30, 167);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(267, 123);
+            this.pictureBox4.Size = new System.Drawing.Size(200, 100);
             this.pictureBox4.TabIndex = 38;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(589, 31);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(442, 25);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(267, 123);
+            this.pictureBox3.Size = new System.Drawing.Size(200, 100);
             this.pictureBox3.TabIndex = 37;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(315, 31);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(236, 25);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(267, 123);
+            this.pictureBox2.Size = new System.Drawing.Size(200, 100);
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(40, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(359, 343);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(269, 279);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 28);
+            this.button2.Size = new System.Drawing.Size(115, 23);
             this.button2.TabIndex = 34;
             this.button2.Text = "Выбрать шаблон";
             this.button2.UseVisualStyleBackColor = true;
@@ -622,38 +563,27 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(825, 614);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(840, 362);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 17);
-            this.label12.TabIndex = 60;
-            this.label12.Text = "Стоимость";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(905, 611);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(292, 22);
-            this.textBox5.TabIndex = 63;
+            this.label12.Size = new System.Drawing.Size(171, 13);
+            this.label12.TabIndex = 119;
+            this.label12.Text = "Введите название для картинок";
             // 
             // ШК
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1403, 677);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(1052, 550);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -681,9 +611,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ШК";
-            this.Text = "ШК";
+            this.Text = "Шкаф-Купе";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.материалBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asdDataSet5)).EndInit();
@@ -710,7 +639,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button5;
@@ -762,6 +690,5 @@
         private System.Windows.Forms.BindingSource материалBindingSource;
         private AsdDataSet5TableAdapters.МатериалTableAdapter материалTableAdapter;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
     }
 }

@@ -29,11 +29,14 @@ namespace Win
             catch { }
             
                 var q = Program.db2.Vivod(0);
-                var lin =
-                from a in q
-                where (a.ФИО.Equals(textBox1.Text) == true)
-                select a;
-                foreach (var a in lin)
+                //var lin =
+                //from a in q
+                //where (a.ФИО.Equals(textBox1.Text) == true)
+                //select a;
+                //foreach (var a in lin)
+                //    listBox1.Items.Add(a);
+                var lin1 = q.Where(c => c.ФИО.ToLower().Contains(textBox1.Text.ToLower())).ToList();
+                foreach (var a in lin1)
                     listBox1.Items.Add(a);
         }
 

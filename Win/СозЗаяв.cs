@@ -27,25 +27,18 @@ namespace Win
              var k = Program.db3.Vivod(0);
              var p = Program.db4.Vivod(0);
             
-             label2.Text = ("комплектующиеID" + " | " + "Название" + " | " + "Количество" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Стоимость");
-                
-                foreach (Комплектующие kom in k)
-                {
-                    if(kom.Количество<20)
-                    {
-                        listBox1.Items.Add(kom);
-                        num = kom.комплектующиеID;
-                        foreach (Поставщик post in p)
-                        {
-                            if(post.комплектующиеID==num)
-                            {
-                                num_post = post.поставщикID;
-                            }
-                            
-                        }
-                    }
-                    
-                }
+                 label2.Text = ("комплектующиеID" + " | " + "Название" + " | " + "Количество" + " | " + "Длина" + " | " + "Ширина" + " | " + "Глубина" + " | " + "Стоимость");
+
+                 foreach (Комплектующие kom in k)
+                 {
+                     if (kom.Количество < 20)
+                     {
+                         listBox1.Items.Add(kom);
+                         button2.Enabled = true;
+                     }
+
+                 }
+
 
         }
 
@@ -53,6 +46,11 @@ namespace Win
         {
             Metods med = new Metods();
             med.Zakypka();
+        }
+
+        private void СозЗаяв_Load(object sender, EventArgs e)
+        {
+            button2.Enabled =false;
         }
     }
 }

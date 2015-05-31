@@ -106,7 +106,8 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Name = "СозЗаяв";
-            this.Text = "СозЗаяв";
+            this.Text = "Создание Заявки на закупку комплектующих";
+            this.Load += new System.EventHandler(this.СозЗаяв_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

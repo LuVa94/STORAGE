@@ -105,4 +105,5 @@ namespace Win
             return this.Мебель.Select(c => c).ToList();
         }
     }
+
 }

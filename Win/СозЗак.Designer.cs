@@ -338,7 +338,7 @@
             this.ClientSize = new System.Drawing.Size(536, 387);
             this.Controls.Add(this.panel1);
             this.Name = "СозЗак";
-            this.Text = "СозЗак";
+            this.Text = "Создание Заказа";
             this.Load += new System.EventHandler(this.СозЗак_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

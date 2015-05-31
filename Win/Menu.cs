@@ -83,7 +83,7 @@ namespace Win
             }
             if (radioButton7.Checked == true)
             {
-                label11.Text = ("материалID" + " | " + "Название"  + " | " + "Стоимость за квадратный метр");
+                label11.Text = ("материалID" + " | " + "Название" + " | " + "Стоимость_за_1_кв_м");
                 var sos = Program.db5.Vivod(0);
                 foreach (Материал sost in sos)
                 {
@@ -170,7 +170,7 @@ namespace Win
             if (radioButton7.Checked == true)
             {
                 label1.Text = "Название";
-                label2.Text = "Стоимость за 1м^2";
+                label2.Text = "Стоимость_за_1_кв_м";
                 label3.Text = "----------";
                 label4.Text = "----------";
                 label5.Text = "----------";
@@ -302,7 +302,7 @@ namespace Win
 
                 try
                 {
-                    if ((textBox1.Text == "") || (textBox2.Text == ""))
+                    if ((textBox1.Text == "")||(textBox2.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -310,7 +310,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db5.ADD(textBox1.Text);
+                Program.db5.ADD((textBox1.Text), Convert.ToInt32(textBox2.Text));
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -515,7 +515,7 @@ namespace Win
                 {
                     Poisk();
                     listBox1.Items.Clear();
-                    Program.db5.Edit(Program.r, (textBox1.Text));
+                    Program.db5.Edit(Program.r, textBox1.Text, Convert.ToInt32(textBox2.Text));
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox3.Text = "";
@@ -594,6 +594,9 @@ namespace Win
                 {
                     Poisk();
                     listBox1.Items.Clear();
+                    var d = Program.db7.Заказ.Where(p => p.мебельID == Program.r);
+                    Program.db7.Заказ.DeleteAllOnSubmit(d);
+                    Program.db7.SubmitChanges();
                     Program.db1.Delete(Program.r);
                     MessageBox.Show("Удаление записи с ID " + Program.r + " завершено");
                     Out();
@@ -606,6 +609,9 @@ namespace Win
                 {
                     Poisk();
                     listBox1.Items.Clear();
+                    var d = Program.db7.Заказ.Where(p => p.клиентID == Program.r);
+                    Program.db7.Заказ.DeleteAllOnSubmit(d);
+                    Program.db7.SubmitChanges();
                     Program.db2.Delete(Program.r);
                     MessageBox.Show("Удаление записи с ID " + Program.r + " завершено");
                     Out();
@@ -618,6 +624,9 @@ namespace Win
                 {
                     Poisk();
                     listBox1.Items.Clear();
+                    var d = Program.db6.Закупка.Where(p => p.комплектующиеID == Program.r);
+                    Program.db6.Закупка.DeleteAllOnSubmit(d);
+                    Program.db6.SubmitChanges();
                     Program.db3.Delete(Program.r);
                     MessageBox.Show("Удаление записи с ID " + Program.r + " завершено");
                     Out();
@@ -630,6 +639,9 @@ namespace Win
                 {
                     Poisk();
                     listBox1.Items.Clear();
+                    var d = Program.db6.Закупка.Where(p => p.поставщикID == Program.r);
+                    Program.db6.Закупка.DeleteAllOnSubmit(d);
+                    Program.db6.SubmitChanges();
                     Program.db4.Delete(Program.r);
                     MessageBox.Show("Удаление записи с ID " + Program.r + " завершено");
                     Out();
@@ -726,29 +738,6 @@ namespace Win
             button7.Enabled = false;
             Metods med = new Metods();
             med.Dvizhenie();
-        }
-
-        private void отправитьДокументыКлиентуНаПочтуToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Mail ml = new Mail();
-            ml.ShowDialog();
-        }
-
-        private void действияДляПользователясотрудникаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void графикToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = new GraphForm();
-            form.ShowDialog();
-        }
-
-        private void таблицаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var form = new TableForm();
-            form.ShowDialog();
         }
     }
 }
