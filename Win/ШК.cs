@@ -544,30 +544,48 @@ namespace Win
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try
+            if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (comboBox1.Text == ""))
             {
-                if ((textBox1.Text == "") || (textBox2.Text == "") || (textBox3.Text == "") || (comboBox1.Text == ""))
-                {
-                    MessageBox.Show("Часть полей не заполнено");
-                    return;
-                }
-                if ((Convert.ToInt32(textBox1.Text) < 200) || (Convert.ToInt32(textBox2.Text) < 200) || (Convert.ToInt32(textBox3.Text) < 200))
-                {
-                    MessageBox.Show("Введенные размеры малы");
-                    return;
-                }
+                MessageBox.Show("Ошибка: Часть полей не заполнено");
+                return;
             }
-            catch { }
-           
-            try
+
+            decimal width = 0;
+            decimal height = 0;
+            decimal length = 0;
+
+            if (!decimal.TryParse(textBox1.Text, out width) || !decimal.TryParse(textBox2.Text, out height) || !decimal.TryParse(textBox3.Text, out length))
             {
-                if ((eskiz1 == false) || (eskiz2 == false))
-                {
-                    MessageBox.Show("Ошибка: не нарисован эскиз");
-                    return;
-                }
+                MessageBox.Show("Ошибка: В размерах должны быть введены только цифры");
+                return;
             }
-            catch { }
+
+            if ((width < 200) || (height < 200) || (length < 200))
+            {
+                MessageBox.Show("Ошибка: Введенные размеры малы");
+                return;
+            }
+         
+            if ((eskiz1 == false) || (eskiz2 == false))
+            {
+                MessageBox.Show("Ошибка: не нарисован эскиз");
+                return;
+            }
+
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ошибка: не выбран материал");
+                return;
+            }
+
+            int model = GetModel();
+            int polkiLevo = GetPolkiLevo();
+            int polkiVerh = GetPolkiVerh();
+            int oformlenie = GetOformlenie();
+
+            var calculator = new PriceCalculator();
+            calculator.CalculateShkafKupe(model, polkiLevo, polkiVerh, oformlenie, width, height, length, comboBox1.Text);
+            textBox5.Text = calculator.Price.ToString("F2") + " + 25% = " + (calculator.Price * 1.25M).ToString("F2");
 
             //для запоминания данных (для создания договора)
             Program.vibormeb = 3;
@@ -575,12 +593,100 @@ namespace Win
             Program.shirina = Convert.ToInt32(textBox2.Text);
             Program.glybina = Convert.ToInt32(textBox3.Text);
             Program.material1 = comboBox1.Text;
-            //Program.stoimost = 0;
+            Program.stoimost = Convert.ToInt32(calculator.Price * 1.25M);
             //Program.Datetime_vipol;
 
             button4.Enabled = true;
             StimostDatetime f2 = new StimostDatetime();
             f2.ShowDialog();
+        }
+
+        private int GetModel()
+        {
+            int model = 0;
+
+            if (radioButton1.Checked)
+            {
+                model = 1;
+            }
+
+            if (radioButton2.Checked)
+            {
+                model = 2;
+            }
+            if (radioButton3.Checked)
+            {
+                model = 3;
+            }
+            if (radioButton4.Checked)
+            {
+                model = 4;
+            }
+            if (radioButton5.Checked)
+            {
+                model = 5;
+            }
+            if (radioButton6.Checked)
+            {
+                model = 6;
+            }
+            return model;
+        }
+
+        private int GetPolkiLevo()
+        {
+            int polkiLevo = 0;
+
+            if (radioButton9.Checked)
+            {
+                polkiLevo = 1;
+            }
+
+            if (radioButton10.Checked)
+            {
+                polkiLevo = 2;
+            }
+
+            return polkiLevo;
+        }
+
+        private int GetPolkiVerh()
+        {
+            int polkiVerh = 0;
+
+            if (radioButton7.Checked)
+            {
+                polkiVerh = 2;
+            }
+
+            if (radioButton8.Checked)
+            {
+                polkiVerh = 4;
+            }
+
+            return polkiVerh;
+        }
+
+        private int GetOformlenie()
+        {
+            int oformlenie = 0;
+
+            if (radioButton14.Checked)
+            {
+                oformlenie = 1;
+            }
+
+            if (radioButton13.Checked)
+            {
+                oformlenie = 2;
+            }
+
+            if (radioButton15.Checked)
+            {
+                oformlenie = 3;
+            }
+
+            return oformlenie;
         }
     }
 }

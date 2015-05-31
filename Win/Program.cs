@@ -13,13 +13,13 @@ namespace Win
         /// </summary>
         /// 
 
-        public static DB_meb db1 = new DB_meb(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        public static DB_kl db2 = new DB_kl(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        public static DB_com db3 = new DB_com(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        public static DB_post db4 = new DB_post(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        public static DB_sost db5 = new DB_sost(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        public static DB_zak db6 = new DB_zak(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
-        public static DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\Rehcfx\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_meb db1 = new DB_meb(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_kl db2 = new DB_kl(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_com db3 = new DB_com(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_post db4 = new DB_post(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_sost db5 = new DB_sost(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_zak db6 = new DB_zak(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
+        public static DB_zakaz db7 = new DB_zakaz(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Татьяна\Desktop\WinLinq\Win\Asd.mdf;Integrated Security=True;Connect Timeout=30");
 
         // переменные для конструктора мебели
         public static int vibormeb = 0;

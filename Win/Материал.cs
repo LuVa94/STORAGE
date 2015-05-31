@@ -18,7 +18,7 @@ namespace Win
             set;
         }
         [Column]
-        public string  Название
+        public string Название
         {
             get;
             set;
@@ -34,7 +34,7 @@ namespace Win
 
         public override string ToString()
         {
-            return материалID + " | " +   Название;
+            return материалID + " | " + Название;
         }
     }
     public class DB_sost : DataContext

@@ -83,7 +83,7 @@ namespace Win
             }
             if (radioButton7.Checked == true)
             {
-                label11.Text = ("материалID" + " | " + "Название");
+                label11.Text = ("материалID" + " | " + "Название"  + " | " + "Стоимость за квадратный метр");
                 var sos = Program.db5.Vivod(0);
                 foreach (Материал sost in sos)
                 {
@@ -170,7 +170,7 @@ namespace Win
             if (radioButton7.Checked == true)
             {
                 label1.Text = "Название";
-                label2.Text = "----------";
+                label2.Text = "Стоимость за 1м^2";
                 label3.Text = "----------";
                 label4.Text = "----------";
                 label5.Text = "----------";
@@ -302,7 +302,7 @@ namespace Win
 
                 try
                 {
-                    if ((textBox1.Text == ""))
+                    if ((textBox1.Text == "") || (textBox2.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -310,7 +310,7 @@ namespace Win
                 }
                 catch { }
                 listBox1.Items.Clear();
-                Program.db5.ADD((textBox1.Text));
+                Program.db5.ADD(textBox1.Text);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -504,7 +504,7 @@ namespace Win
             {
                 try
                 {
-                    if ((textBox1.Text == ""))
+                    if ((textBox1.Text == "") || (textBox2.Text == ""))
                     {
                         MessageBox.Show("Часть полей не заполнено");
                         return;
@@ -732,6 +732,23 @@ namespace Win
         {
             Mail ml = new Mail();
             ml.ShowDialog();
+        }
+
+        private void действияДляПользователясотрудникаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void графикToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new GraphForm();
+            form.ShowDialog();
+        }
+
+        private void таблицаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new TableForm();
+            form.ShowDialog();
         }
     }
 }

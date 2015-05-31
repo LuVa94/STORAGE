@@ -11,6 +11,7 @@
     <AssemblyName>Win</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,12 +47,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GemBox.Document">
+      <HintPath>..\packages\GemBox.Document.25.3.30.1012\lib\net30\GemBox.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet">
+      <HintPath>..\packages\GemBox.Spreadsheet.39.3.30.1063\lib\net30\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\..\..\..\Desktop\курсач_ооп_2курс\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -108,7 +115,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AsdDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AsdDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsdDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Email.cs" />
+    <Compile Include="TableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForm.designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +140,13 @@
       <DependentUpon>Mail.cs</DependentUpon>
     </Compile>
     <Compile Include="Metods.cs" />
+    <Compile Include="PriceCalculator.cs" />
+    <Compile Include="GraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphForm.designer.cs">
+      <DependentUpon>GraphForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViborMeb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,11 +228,17 @@
     <Compile Include="ШП.Designer.cs">
       <DependentUpon>ШП.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Klient.resx">
       <DependentUpon>Klient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mail.resx">
       <DependentUpon>Mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphForm.resx">
+      <DependentUpon>GraphForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViborMeb.resx">
       <DependentUpon>ViborMeb.cs</DependentUpon>
@@ -353,6 +384,18 @@
     <None Include="AsdDataSet8.xss">
       <DependentUpon>AsdDataSet8.xsd</DependentUpon>
     </None>
+    <None Include="AsdDataSet9.xsc">
+      <DependentUpon>AsdDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="AsdDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsdDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AsdDataSet9.xss">
+      <DependentUpon>AsdDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
